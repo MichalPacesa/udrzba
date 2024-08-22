@@ -1,0 +1,274 @@
+/*  styly pre mobily */
+@media (max-width: 767px) {
+	#myapp{
+		width:100%;margin:0rem;
+	}
+	#myapp_form{
+		width:100%;
+		margin:0rem;
+	}
+	#myapp_form_oprava{
+		width:100% !important;
+		margin:0rem;
+	}
+	#formlogin, #formlogin:after, #formlogin:before{
+		width:100%;
+		box-sizing: content-box;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.input-login{
+		width: 20% !important;
+	}
+	.graybox_login{
+		width: 100%;
+	}
+
+	.riadokopravy{
+		padding-top: 1rem;
+	}
+
+	.td{
+		border: none;
+		word-wrap: break-word;
+	}
+	.tr{
+		border: 0.063rem solid var(--border);
+		/*.border0{border-top: 0px none;  }*/
+	}
+
+	h1{
+		width: 100%;
+		margin-left: 0.7rem;
+	}
+	h2{
+		justify-content: center;
+		margin: 2rem auto 3rem auto;
+	}
+
+	p.oznam{
+		margin-left: 10px;
+	}
+
+	.mytable {
+		font-size:120%!important;
+	}
+
+	.border0{
+		border-top: 0px none;
+	}
+
+	.filtre{
+		margin-bottom: 1.5rem;
+	}
+
+	.margintop{
+		margin-top: 0 !important;
+	}
+
+	.form-control{
+		height: 2rem;
+		width: 15rem !important;
+		background-color: white !important;
+	}
+
+	.zamoprava{
+		margin-top: 1rem;
+	}
+
+	#ikona-menu{
+		margin-left: 5rem;
+	}
+
+	.navbar{
+		padding-left: 40px;
+	}
+	.ikona-menu button{
+		margin-right: 5rem !important;
+	}
+
+	.logo{
+		margin-right:5rem;
+	}
+
+	#navbarExample01{
+		margin-right:5rem;
+	}
+
+	#vedlajsie-menu {
+		margin-left:4.1rem;
+	}
+	.opravy{
+		margin-top: 0.5rem;
+	}
+	.ikona{
+		padding: 0;
+	}
+
+	#myapp_form_oprava {
+		width: 100%;
+		margin: 1em;
+	}
+
+
+}
+
+@media (min-width:768px) and (max-width:1350px) {
+	#myapp{
+		width:100%;margin:0em;
+	}
+	#myapp_form{
+		width:100%;margin:0em;
+	}
+	#myapp_form_oprava{
+		width:100%;margin:0em;
+	}
+	#formlogin {
+		width:100%;
+	}
+	.graybox_login{
+		width: 100%;
+	}
+	h1{
+		width: 100%;margin-left: 10px;
+	}
+	h2{
+		width: 25%;
+		font-size: 1.8rem;
+		margin-left: 10px;
+		justify-content: flex-start;
+	}
+
+	p.oznam{
+		margin-left: 10px;
+	}
+	.mytable {
+		font-size:120%!important;
+	}
+
+	.tr{
+		border: 0.063rem solid var(--border);
+		/*.border0{border-top: 0px none;  }*/
+	}
+	.td{
+
+		border-bottom: none;
+		word-wrap: break-word;
+	}
+
+	.form-control{
+		height: 2rem;
+		width: 10rem;
+	}
+	.form-select{
+		width: 10rem;
+	}
+
+	.col-md-4{
+		justify-content: space-between;
+
+	}
+
+	.ikony{
+		padding: 0rem !important;
+	}
+	#vedlajsie-menu {
+		margin-left:4.1rem;
+	}
+	#myapp_form_oprava {
+		width: 100%;
+		margin: 5px;
+	}
+
+
+}
+
+@media (min-width:1300px) and (max-width:1750px) {
+	
+	#formlogin {
+		width:50%;
+	}
+	.graybox_login{
+		width: 50%;
+	}
+
+	.td{
+		word-wrap: break-word;
+	}
+
+
+}
+
+
+@media (min-width: 992px)   {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-right: 1rem !important;
+		padding-left: 1rem !important;
+	}
+	.nav-item {
+		margin-right: 0rem !important;
+
+	}
+	#vedlajsie-menu{
+		margin-left:-14rem;
+	}
+
+}
+
+@media (max-width: 570px) {
+	.mnozstvo{
+		width: 7.5rem !important;
+	}
+}
+
+@media (max-width: 434px) {
+
+	#vedlajsie-menu {
+		margin-left:3rem;
+		font-size: 0.85rem !important;
+	}
+	.logo{
+		margin-right: 14rem !important;
+	}
+	#ikona-menu{
+		margin-left: -8rem !important;
+	}
+
+	#navbarExample01{
+		margin-left:1rem;
+	}
+	#myapp{
+		width:100%;
+	}
+	#myapp_form_oprava{
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 370px) {
+	#ikona-menu{
+		margin-left: -10rem !important;
+	}
+	#navbarExample01{
+		margin-left:5rem;
+	}
+	#vedlajsie-menu {
+		margin-left:-1rem;
+		font-size: 0.80rem !important;
+	}
+
+}
+
+@media (max-width: 338px) {
+	#ikona-menu{
+		margin-left: -12rem !important;
+	}
+	#navbarExample01{
+		margin-left:5rem;
+	}
+	#vedlajsie-menu {
+		margin-left:-1rem;
+		font-size: 0.70rem !important;
+	}
+
+}

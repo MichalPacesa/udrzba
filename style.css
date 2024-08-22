@@ -1,0 +1,848 @@
+:root {
+	--blue: #0089d1;
+	--darkblue: #006da3; /* na hover */
+	--lightblue: rgba(0, 137, 209, 0.69); /* hlavička tabulky */
+	--hover: rgba(132, 170, 191, 0.07);
+	--evenrow: rgba(155, 179, 193, 0.03);
+	--border: rgba(221, 221, 221, 0.5);
+	--border_form: rgba(221, 221, 221, 0.75);
+	--graybox: rgba(211, 210, 210, 0.09);
+	--footer: rgb(241, 240, 240);
+	--gray: #333333;
+	--sirka: 70%;
+	--sirka_form: 50%;
+	--sirka_form_oprava: 60%;
+	--sirka_login: 35%;
+	--red: #e10000;
+	--darkred: #c42f2f;
+
+/* --blue pouziva sa ako : var(--blue) */
+
+}
+
+html, body{
+	height: 100%;
+}
+
+h1 {
+	width: var(--sirka_form);
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--blue);
+	border-collapse: collapse;
+	font-size: 2.5rem;
+	text-align: left;
+	margin: 100px auto 0px auto; /* top right bottom left*/
+}
+
+h2 {
+	width: var(--sirka);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--blue);
+	border-collapse: collapse;
+	font-size: 2.5rem;
+	margin: 2rem auto 1.2rem auto; /* top right bottom left*/
+}
+
+h3 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--blue);
+	border-collapse: collapse;
+	font-size: 2.5rem;
+
+
+}
+
+.pata{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: var(--footer);
+	font-size: 1rem;
+}
+
+#myapp {
+	width: var(--sirka);
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1rem;
+}
+
+#myapp_form {
+	width: var(--sirka_form);
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1rem
+}
+
+#myapp_form_oprava {
+	width: var(--sirka_form_oprava);
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1rem
+}
+
+.login {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+
+
+}
+#formlogin {
+	width: var(--sirka_login);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* you may need to adjust depending on your specific use case */
+}
+
+.mytable{
+	font-size: 1rem;
+	color: var(--gray);
+	border-collapse: collapse;
+	border: 1px solid var(--border);
+}
+
+.graybox{
+	background-color: var(--graybox);
+	border: 0.063rem solid  var(--border);
+	border-top-left-radius: 1rem 1rem;
+	border-top-right-radius: 1rem 1rem;
+	min-height: 6rem;
+
+}
+
+.graybox2{
+	background-color: var(--graybox);
+	border: 0.063rem solid  var(--border);
+	border-bottom-left-radius: 1rem 1rem;
+	border-bottom-right-radius: 1rem 1rem;
+	min-height: 5rem;
+}
+
+.graybox_login{
+	background-color: var(--graybox);
+	border: 0.063rem solid  var(--border);
+	border-radius: 0.5rem;
+	min-height: 10rem;
+}
+
+.th{
+	font-size: 1.125rem; /* 16px */
+	background-color: var(--lightblue);
+	padding: 0.5rem;
+	text-align:left;
+	color: white;
+	border-collapse: collapse;
+	border: 0.063rem solid rgba(255, 255, 255, 0.5); /* 0.063rem = 1px */
+}
+
+.tr{
+	background-color:#ffffff;
+
+}
+
+.tr:nth-child(even){background-color: var(--evenrow);}
+
+.tr:nth-child(odd){background-color: #ffffff;}
+
+.tr:hover{background-color: var(--hover);}
+
+.td{
+	font-size: 1.125rem;
+	border: 0.063rem solid var(--border);
+	padding: 0.5rem;
+}
+
+.filtre{
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: center !important;
+	padding-bottom: 1.5rem;
+}
+
+.bold {
+	font-weight:bold;
+	font-weight:500;
+}
+.bg-image {
+	background-size: auto;
+}
+
+.select_height{
+	height:40px;
+}
+
+/* navigacia */
+h4 {
+	color:#db2424;
+}
+.btn-primary,a.btn-primary:link,a.btn-primary:hover,a.btn-primary:active,a.btn-primary:visited {
+	background-color: var(--darkblue) !important;
+}
+
+.ikona{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 0.1rem;
+}
+
+#prilohaikona{
+	margin-left: 0.5rem;
+	flex-wrap: nowrap;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 0.1rem;
+}
+
+
+.ikona_form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5rem !important;
+	height: 2rem;
+	margin-right: .1rem;
+	font-size: 1.2rem;
+	color: var(--darkblue) !important;
+	font-family: Verdana;
+
+}
+
+input:disabled, select:disabled, textarea:disabled {
+	background-color: rgba(216, 215, 215, 0.37) !important;
+}
+
+.ikony{
+	justify-content: center !important;
+}
+
+
+.btn-label {
+	color: var(--darkblue);
+	position: relative;
+	left: -6px;
+	bottom: 0px;
+	display: inline-block;
+	padding: 6px 12px;
+	border-radius: 5px;
+	box-shadow: none !important;
+	background-color: rgba(220, 220, 220, 0.51);
+}
+
+.btn-labeled {
+	border: 1px solid rgba(133, 133, 133, 0.55);
+	border-radius: 5px;
+	height: 43px !important;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 18px;
+}
+
+.btn-light {
+	width: auto;
+	background-color: white;
+	color: black;
+}
+
+.btn-light:hover{
+	background-color: rgba(220, 220, 220, 0.2);
+	border-color: rgba(133, 133, 133, 0.51);
+}
+
+.btn_ikony { /* IKONY */
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.btn {
+	padding: 0rem 0rem 0rem 0rem !important; /* top right bottom left*/
+	background-color: #FFFFFF;
+}
+
+.padding{
+	padding: .625rem 1.5rem .5rem !important;
+}
+
+
+
+.navbar .nav-link {
+	color: var(--blue) !important;
+}
+
+.navbar{
+	z-index: 10 !important;
+}
+
+.navbar .nav-link:hover,.navbar .nav-link:active{
+	color: var(--darkblue) !important;
+}
+
+.nav-item {
+	font-weight:500;
+	margin-right: 1.25rem;
+}
+
+.logo_a {
+	color: var(--blue);
+	margin-left:-1rem;
+	font-family: Verdana;
+	font-style:italic;
+	font-size:30px;
+	font-weight: bold;
+	margin-top: 0px;
+
+}
+
+.logo_b {
+	color: var(--blue);
+	margin-left:-1rem;
+	font-family: Verdana;
+	font-style:italic;
+	font-size:17px;
+	font-weight: bold;
+
+}
+.logo:hover a, .logo:active a {
+	color: var(--darkblue) !important;
+}
+
+.navbar-nav {
+	margin-right: 5px;
+}
+
+i.fa-regular, .icon { /* IKONY */
+	font-size: 1.4rem;
+	color: var(--darkblue) !important;
+	margin-top:2px
+}
+
+i.fa-arrow-left { /* IKONY */
+	font-size: 1.4rem;
+	color: var(--darkblue) !important;
+	margin-top:3px
+}
+
+
+
+
+.cursor {
+	cursor: pointer;
+}
+
+/* koniec navigacia */
+
+
+/* Hladanie */
+
+
+.input-box{
+	float: left;
+	display: inline;
+	position: relative;
+
+}
+
+.input-box i {
+
+	position: absolute;
+	right: 15px;
+	top:3px;
+	color: #777777;
+	font-size: 18px;
+}
+
+.lupa {
+	color: #777777;
+	position: relative;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.zmaz{
+	z-index: 3;
+	position: absolute;
+	right: 50px;
+	top: 8px;
+	color: #777777;
+	font-size: 18px;
+}
+
+.form-control{
+	display: unset;
+	width: 15rem !important;
+	height: 2rem;
+}
+
+.form-control-sm{
+	display: unset;
+	width: 5rem !important;
+	height: 1rem !important;
+	border: 1px solid;
+}
+
+.riadokopravy{
+	padding-bottom: 0.5rem;
+	justify-content: center !important;
+	border-top: 1px solid #e0e0e0 !important;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#nadpisoprava{
+	width: var(--sirka_form_oprava);
+}
+
+
+
+
+.zamoprava{
+	width: 15rem !important;
+}
+
+#userfile{
+	width: 22rem !important;
+}
+
+textarea.form-control{
+	min-height: 10rem !important;
+}
+
+textarea.popisoprava { /* Popis na oprave */
+	width:12rem !important;
+	margin-top:0.5rem;
+	min-height:5rem !important;
+}
+
+.form-select{
+	width: 15rem;
+	height: 2rem;
+	padding-top: 0.2rem;
+}
+
+.form-select-sm{
+	font-size: 15px;
+}
+
+.odpracovanehodiny{
+	width: 4rem !important;
+}
+
+.mnozstvo{
+	width: 7.5rem !important;
+}
+
+.datetime-input::-webkit-calendar-picker-indicator {
+	display: none;
+}
+
+
+
+.form-control:focus,.form-select:focus{
+	box-shadow: none;
+	border-color: #858585;
+}
+
+.hladaj{
+	width: 15rem !important;
+}
+
+.input-group-text{
+	height: 35.27px;
+}
+
+.heslo{
+	width: 18.3rem !important;
+	min-width: 1rem !important;
+}
+
+.heslo_login{
+	width: 18.3rem !important;
+	min-width: 1rem !important;
+}
+
+.input-group-text{
+	display: inline-block;
+}
+
+.pagination {
+	display: inline-block;
+}
+
+.pagination button{
+	color: black;
+	float: left;
+	text-decoration: none;
+}
+
+.pagination button:hover:not(.active) {background-color: #ddd;}
+
+
+.margintop {
+	margin-top:2.2rem;
+}
+
+.marginbottom {
+	margin-bottom: 0.1rem;
+}
+
+.list{
+
+	padding-top: 20px;
+	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+
+}
+
+.list i{
+	font-size: 19px;
+	color: red;
+}
+
+.list small{
+	color:#dedddd;
+}
+
+.results {
+	border: 0.5px solid #ccc;  /* Svetlejší a útlejší border */
+	background-color: #fff;
+	padding: 10px;  /* Menší padding */
+	margin-top: 10px;
+	max-width: 300px;
+	z-index: 100;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+li {
+	padding: 10px 0;
+	cursor: pointer;
+}
+
+.pozicie:hover, .selected {
+	background-color: #ddd;
+
+}
+
+.zoznam_pozicii{
+	position: absolute;
+	width: 20rem;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------STARY STYL ------------------------------------------------------------------------------------------------------------------*/
+
+
+
+body {
+	background-color: #FFFFFF;
+	color: black;
+	font-weight: 100;
+}
+
+form b
+{
+	font-weight: bold;
+}
+
+#tabulka td {
+
+	color: black;
+	font-weight: normal;
+}
+
+#sipky a {
+	color: white;
+}
+
+.button2{
+	margin-left: 10px;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 15px;
+}
+
+
+p.text-grey
+{
+	color: #4f4f4f !important;
+}
+
+p.cervene,.cervene {
+	font-weight: normal;
+	color: #d64161;
+	font-size: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: var(--sirka);
+	text-align: center;
+	background-color: #ffffff;
+	text-shadow: 0px 0px 0px;
+	margin-top: 1rem;
+}
+
+p.oznam{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #FFFFFF;
+	font-size: 15px;
+	width: var(--sirka_form);
+	margin-top: 1rem;
+	text-align: left;
+}
+
+
+@keyframes hideText {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.red
+{
+	font-weight: normal;
+	color: #d64161!important;
+	font-size: 15px;
+}
+
+.hviezdicka
+{
+	color:red;
+	margin-left: 1px;
+	text-weight: bold;
+}
+
+
+.zoznam {
+	font-family: Roboto, Arial-narrow, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.zoznam td, .zoznam th {
+	color: black !important;
+	border-collapse: collapse;
+	border: 1px solid var(--border_form);
+	margin-left: 5px;
+	text-align: left;
+	padding: 8px 0px 12px 8px; /* top right bottom left*/
+}
+
+.zoznam th {
+	color: white;
+	border-collapse: collapse;
+}
+
+.zoznam tr:nth-child(even){background-color: var(--evenrow);}
+
+.zoznam tr:nth-child(odd){background-color: #ffffff;}
+
+.zoznam tr:hover{background-color: var(--hover);}
+
+.zoznam input[type="text"],input[type="password"],input[type="number"],input[type="email"],textarea {
+
+}
+
+.zoznam_div .riadokopravy:hover{background-color: var(--hover) !important}
+
+.login td, .login th {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+	margin-left: 5px;
+	text-align: left;
+	font-size: 1.1rem;
+	/*STARE padding: 8px 0px 12px 8px; /* top right bottom left*/
+	padding: 20px 0px 25px 20px; /* top right bottom left*/
+
+}
+
+.login th {
+	background-color: var(--darkred);
+	color: white;
+	border-collapse: collapse;
+}
+
+.login tr:nth-child(even){background-color: #fcfcfc;}
+
+.login tr:nth-child(odd){background-color: #ffffff;}
+
+.login tr:hover{background-color: #f7f7f7;}
+
+
+.login input[type="text"],.login input[type="password"],.login input[type="number"]
+{
+	width:55%;
+}
+
+Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+Firefox
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+
+.ZobrazitHeslo
+{
+	margin-bottom:2px;
+	margin-left:10px;
+	margin-right:7px;
+	vertical-align:middle;
+	width:18px;
+	height:18px;
+}
+
+.Checkbox
+{
+	vertical-align: middle;
+	width:18px;
+	height:18px;
+	margin-left:5px;
+}
+
+.width-200{
+	width:200px;
+}
+.width-300{
+	width:300px;
+}
+.width-400{
+	width:400px;
+}
+.width-500{
+	width:500px;
+}
+.height-250{
+	height:250px;
+}
+
+.hlaska
+{
+	color: var(--darkred);
+	font-weight: bold;
+	width: var(--sirka_login);
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.notification-enter-active, .notification-leave-active {
+	transition: opacity 0.5s;
+}
+.notification-enter, .notification-leave-to {
+	opacity: 0;
+}
+.notification {
+	visibility: hidden;
+	min-width: 160px;
+	margin-right: 30px;
+	background-color: var(--blue);
+	color: #fff;
+	text-align: left;
+	border-radius: 2px;
+	padding: 20px;
+	position: fixed;
+	z-index: 2;
+	right: 30px;
+	bottom: 30px;
+}
+.notification.show {
+	visibility: visible;
+}
+
+.closebtn {
+	position: absolute;
+	right: 20px;
+	top: 45%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.timer {
+	background-color: white;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: countdown 5s linear forwards;
+}
+
+.notification_chyba {
+	visibility: hidden;
+	min-width: 160px;
+	margin-right: 30px;
+	background-color: var(--red);
+	color: #fff;
+	text-align: left;
+	border-radius: 2px;
+	padding: 20px;
+	position: fixed;
+	z-index: 2;
+	right: 30px;
+	bottom: 30px;
+}
+
+.notification_chyba.show {
+	visibility: visible;
+}
+
+.timer_chyba {
+	background-color: white;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: countdown 10s linear forwards;
+}
+
+@keyframes countdown {
+	0% { width: 100%; }
+	100% { width: 0; }
+}
+
+.text {
+	display: flex;
+	padding-left: 20px;
+	padding-right: 50px;
+	align-items: center;
+}
+.info-icon {
+	margin-right: 15px;
+	font-size: 20px;
+}
+
+.datumoprava[type="datetime-local"] {
+	width: 12rem !important;
+	padding: 0;
+}
+
+
