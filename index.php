@@ -6,10 +6,12 @@ session_start();
     <head><?php include "head.php" ?></head>
     <body>
     <?php
-    include "config.php";  //
+    include "config.php";  
     include "lib.php";	//	funkcie
     include 'login.php';
-    if (!isset($_SESSION['Login_Prihlasovacie_meno'])){  // nie je prihlaseny
+
+    // Ak nie je pouzivatel prihlaseny tak exit
+    if (!isset($_SESSION['Login_Prihlasovacie_meno'])){  
         exit;
     }
     include_once "navbar.php"; // navigacia
@@ -24,7 +26,6 @@ session_start();
     }
 
     ?>
-    <?php /*if($_SESSION["hlaska"])	echo $_SESSION["hlaska"];// upozornenie */?>
 
     <div id='myapp'>
         <div class="graybox container-fluid col-md-12 col-12">
@@ -82,9 +83,6 @@ session_start();
                 <div class="col-md-3 col-12">
                     <!--Prazdny-->
                 </div>
-
-
-
 
             </div>
         </div>
@@ -164,8 +162,6 @@ session_start();
             </div>
         </div>
         <br><br><br><br><br>
-
-
 
         <transition name="notification2">
             <div v-if="notificationDelVisible" class="notification show">
