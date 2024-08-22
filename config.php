@@ -5,11 +5,6 @@ $user = "root";         /* User */
 $password = "";         /* Password */
 $dbname = "udrzba";   /* Database name */
 
-//$host = "db.www-stranky.sk";    /* Host name */
-//$user = "pacesa";         /* User */
-//$password = "Majcichov91922";         /* Password */
-//$dbname = "udrzba";   /* Database name */
-
 $dir_name="udrzba";
 
 // Create connection
@@ -20,9 +15,7 @@ if (!$dblink) {
     die("Nepodarilo sa nadviazať spojenie s databázou: " . mysqli_connect_error());
 }
 
-/* dfsfsfd */
-
-$stav = 0;// ci vypisovat php errory
+$stav = 0;  // stav = 1 znamena, ze chceme vidiet chyby 
 @ini_set('display_errors', $stav);
 @ini_set('display_startup_errors;',$stav);
 if($stav){
