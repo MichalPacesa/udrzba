@@ -7,7 +7,7 @@ session_start();
     <body>
     <?php
     include "config.php";  
-    include "lib.php";	//	funkcie
+    include "lib.php";	
     include 'login.php';
 
     // Ak nie je pouzivatel prihlaseny tak exit
