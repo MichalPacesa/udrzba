@@ -4,5 +4,5 @@ Tento projekt je výsledkom mojej diplomovej práce, ktorej cieľom bolo vytvori
 
 ## Technológie
 
-Systém bol vyvinutý s použitím technológií PHP a Vue.js, pričom každá časť aplikácie je optimalizovaná pre jednoduché a bezpečné používanie. Počas práce sme nadobudli nové skúsenosti vo vývoji webových aplikácií a návrhu softvéru.
+Systém bol vyvinutý s použitím technológií PHP a Vue.js, pričom každá časť aplikácie je optimalizovaná pre jednoduché a bezpečné používanie. Počas práce som nadobudol nové skúsenosti vo vývoji webových aplikácií a návrhu softvéru.
 
