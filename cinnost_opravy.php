@@ -14,7 +14,7 @@
     }
 
     if(ZistiPrava("editCinnostiOpravy",$dblink) == 0){
-        include_once "navbar.php";
+        include_once "src/partials/navbar.php"; // navigacia
         echo "<span class='oznam cervene'>Nemáte práva na úpravu činností opravy.</span>";
         exit;
     }

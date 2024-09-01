@@ -204,7 +204,7 @@ if($PoruchaID)
 }
 else
 {
-    include_once "navbar.php";
+    include_once "src/partials/navbar.php"; // navigacia
     echo '<span class="oznam cervene text-start">Nebola nájdená porucha ku oprave</span>';
     exit;
 }

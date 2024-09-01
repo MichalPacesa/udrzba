@@ -14,7 +14,7 @@
     }
 
     if(ZistiPrava("zamestnanci",$dblink) == 0){
-        include_once "navbar.php";
+        include_once "src/partials/navbar.php"; // navigacia
         echo "<span class='cervene'>Nemáte práva na úpravu zamestnancov.</span>";
         exit;
     }
@@ -106,7 +106,7 @@ if($ZamestnanecID)
 
     if(!$zobrazit){ /* PRAVA */
         if(ZistiPrava("rola",$dblink) == 0 AND $RolaID == 1){
-                include_once "navbar.php";
+                include_once "src/partials/navbar.php"; // navigacia
                 echo "<span class='cervene'>Nemáte práva na úpravu vybraného zamestnanca.</span>";
                 exit;
         }
@@ -121,11 +121,7 @@ if($ZamestnanecID)
 }
 else
 {
-    //if(ZistiPrava("Edit_zakaznikov",$dblink) == 0)
-    //{
-    //include "navbar.php";
-    //echo "<p class='oznam'>Nemáte práva na editáciu a pridávanie zamestnancov</p>";exit;
-    //}
+
     $akcia = "insert";
     $nadpis = "Nový zamestnanec";
     $ZamestnanecID = "";

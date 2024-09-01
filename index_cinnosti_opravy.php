@@ -14,7 +14,7 @@ session_start();
     {
         exit;
     }
-    include_once "navbar.php"; // navigacia
+    include_once "src/partials/navbar.php"; // navigacia
     if(ZistiPrava("zobrazCinnostiOpravy",$dblink) == 0){
         echo "<span class='oznam cervene'>Nemáte práva na zobrazenie zamestnancov.</span>";
         exit;

@@ -14,7 +14,7 @@
     }
 
     if(ZistiPrava("editStroje",$dblink) == 0){
-        include_once "navbar.php";
+        include_once "src/partials/navbar.php"; // navigacia
         echo "<span class='oznam'>Nemáte práva na úpravu strojov.</p>";
         exit;
     }
@@ -121,11 +121,7 @@ if($StrojID)
 }
 else
 {
-    //if(ZistiPrava("Stroj",$dblink) == 0)
-    //{
-    //include "navbar.php";
-    //echo "<p class='oznam'>Nemáte práva na editáciu a pridávanie strojov.</p>";exit;
-    //}
+
     $akcia = "insert";
     $nadpis = "Nový stroj";
     $Stroj_nazov = "";

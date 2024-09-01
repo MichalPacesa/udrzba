@@ -15,7 +15,7 @@
     }
 
     if(ZistiPrava("Uprav_poruchy",$dblink) == 0){
-        include_once "navbar.php";
+        include_once "src/partials/navbar.php"; // navigacia
         echo "<p class='oznam'>Nemáte práva na upravenie porúch.</p>";
         exit;
     }
@@ -79,11 +79,7 @@ if($PoruchaID)
 }
 else
 {
-    //if(ZistiPrava("Edit_zakaznikov",$dblink) == 0)
-    //{
-    //include "navbar.php";
-    //echo "<p class='oznam'>Nemáte práva na editáciu a pridávanie zamestnancov</p>";exit;
-    //}
+
     $akcia = "insert";
     $nadpis = "Nová porucha";
     $Por_nazov = "";

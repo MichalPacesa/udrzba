@@ -14,7 +14,7 @@ session_start();
     if (!isset($_SESSION['Login_Prihlasovacie_meno'])){  
         exit;
     }
-    include_once "navbar.php"; // navigacia
+    include_once "src/partials/navbar.php"; // navigacia
 
     if(!strpos($_SERVER['HTTP_REFERER'], 'porucha.php') AND !strpos($_SERVER['HTTP_REFERER'], 'zmena_hesla.php') AND !strpos($_SERVER['HTTP_REFERER'], 'oprava.php')){
         $_SESSION["hlaska"] = "";

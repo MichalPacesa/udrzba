@@ -14,7 +14,7 @@ session_start();
     {
         exit;
     }
-    include_once "navbar.php"; // navigacia
+    include_once "src/partials/navbar.php"; // navigacia
     if(!strpos($_SERVER['HTTP_REFERER'], 'zamestnanec.php')){
         $_SESSION["hlaska"] = "";
     }
