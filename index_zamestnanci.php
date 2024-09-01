@@ -166,7 +166,7 @@ session_start();
         </transition>
 
         <footer>
-            <?php include_once "footer.php"; ?>
+            <?php include_once "src/partials/footer.php"; ?>
         </footer>
     </div>
 
