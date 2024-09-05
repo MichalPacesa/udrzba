@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-include_once "config.php";
-include_once "lib.php";
+include_once "../../config.php";
+include_once "../../lib.php";
 
 if(ZistiPrava("editCinnostiOpravy",$dblink) == 0){
 

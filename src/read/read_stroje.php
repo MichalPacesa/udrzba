@@ -1,8 +1,7 @@
 <?php
-
 session_start();
-include_once "config.php";
-include_once "lib.php";
+include_once "../../config.php";
+include_once "../../lib.php";
 
 if(ZistiPrava("editStroj",$dblink) == 0){
 
