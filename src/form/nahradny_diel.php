@@ -462,7 +462,7 @@ mysqli_close($dblink); // odpojit sa z DB
                     app1.KategoriaID = "";
                 }
 
-                if(this.searchInput!==this.oldKategoria){ // zmenilli pouzivatelske  meno
+                if(this.searchInput!==this.oldKategoria){ // zmenilli kategoriu
                     axios.get(`../search/search_kategoria.php?q=${this.searchInput}`)
                         .then(function (response)  {
                             // console.log(response.data);
