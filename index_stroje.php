@@ -331,7 +331,7 @@ session_start();
                     if (stroj) {
                         var c = confirm("Ste si istý, že chcete zmazať stroj e.č."+stroj.Stroj_nazov+"?" );
                         if (c) {
-                            axios.get('zmazat_stroj.php', {
+                            axios.get('src/zmazat/zmazat_stroj.php', {
                                 params: {
                                     StrojID: stroj.StrojID,
                                     Stroj_nazov: stroj.Stroj_nazov

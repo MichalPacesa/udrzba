@@ -319,7 +319,7 @@ session_start();
                     if (zamestnanec) {
                         var c = confirm("Ste si istý, že chcete zmazať zamestnanca "+ zamestnanec.Zam_meno+" "+ zamestnanec.Zam_priezvisko +"?" );
                         if (c) {
-                            axios.get('zmazat_zamestnanca.php', {
+                            axios.get('src/zmazat/zmazat_zamestnanca.php', {
                                 params: {
                                     ZamestnanecID: zamestnanec.ZamestnanecID,
                                     PouzivatelID: zamestnanec.PouzivatelID,

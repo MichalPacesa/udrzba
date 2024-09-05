@@ -248,7 +248,7 @@ session_start();
                     if (cinnost_opravy) {
                         var c = confirm("Ste si istý, že chcete zmazať činnosť opravy "+ cinnost_opravy.Cin_nazov +"?" );
                         if (c) {
-                            axios.get('zmazat_cinnost_opravy.php', {
+                            axios.get('src/zmazat/zmazat_cinnost_opravy.php', {
                                 params: {
                                     Cinnost_opravyID: cinnost_opravy.Cinnost_opravyID,
                                     Cin_nazov: cinnost_opravy.Cin_nazov

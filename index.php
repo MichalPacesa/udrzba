@@ -454,7 +454,7 @@ session_start();
                     if (porucha) {
                         var c = confirm("Ste si istý, že chcete zmazať poruchu "+ porucha.Por_nazov +"?" );
                         if (c) {
-                            axios.get('zmazat_poruchu.php', {
+                            axios.get('src/zmazat/zmazat_poruchu.php', {
                                 params: {
                                     PoruchaID: porucha.PoruchaID,
                                     Por_nazov: porucha.Por_nazov

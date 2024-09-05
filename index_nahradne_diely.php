@@ -357,7 +357,7 @@ session_start();
                     if (nahradny_diel) {
                         var c = confirm("Ste si istý, že chcete zmazať náhradný diel "+ nahradny_diel.Diel_nazov +"?" );
                         if (c) {
-                            axios.get('zmazat_nahradny_diel.php', {
+                            axios.get('src/zmazat/zmazat_nahradny_diel.php', {
                                 params: {
                                     Nahradny_dielID: nahradny_diel.Nahradny_dielID,
                                     Diel_nazov: nahradny_diel.Diel_nazov
