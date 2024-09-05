@@ -3,10 +3,12 @@
 <html>
 <head>
 
-    <?php include_once "head.php";
-    include "config.php";
-    include "lib.php";
-    include 'login.php';
+    <?php include_once '../partials/head.php'; 
+
+    include "../../config.php";
+    include_once "../../lib.php";
+    include '../auth/login.php';
+
 
     if (!isset($_SESSION['Login_Prihlasovacie_meno']))  // nie je prihlaseny
     {

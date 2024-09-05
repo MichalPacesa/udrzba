@@ -356,16 +356,16 @@ session_start();
                 },
 
                 editRow: function(ZamestnanecID){
-                    location.replace("zamestnanec.php?ZamestnanecID="+ZamestnanecID);
+                    location.replace("src/form/zamestnanec.php?ZamestnanecID="+ZamestnanecID);
 
                 },
 
                 viewRow: function(ZamestnanecID){
-                    location.replace("zamestnanec.php?ZamestnanecID="+ZamestnanecID+"&zobrazit=1");
+                    location.replace("src/form/zamestnanec.php?ZamestnanecID="+ZamestnanecID+"&zobrazit=1");
                 },
 
                 newRow: function(){
-                    location.replace("zamestnanec.php");
+                    location.replace("src/form/zamestnanec.php");
                 },
 
                 nextPage: function() {
