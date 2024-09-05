@@ -3,12 +3,14 @@ session_start();
 ?>
     <!DOCTYPE html>
     <html>
-    <head><?php include "head.php" ?></head>
-  <body>
+    <head><?php include_once "src/partials/head.php"; ?></head>
+    <body>
     <?php
-    include "config.php";  //
-    include "lib.php";	//	funkcie
-    include 'login.php';
+    
+    include "config.php";  
+    include "lib.php";	
+    include 'src/auth/login.php';
+
     if (!isset($_SESSION['Login_Prihlasovacie_meno']))  // nie je prihlaseny
     {
         exit;

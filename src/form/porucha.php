@@ -215,7 +215,7 @@ else
     </table>
 </form>
 
-<form id="back" action="zmena_poruchy.php" method="POST"></form>
+<form id="back" action="../zmena/zmena_poruchy.php" method="POST"></form>
 </p>
 <?php
 mysqli_close($dblink); // odpojit sa z DB
