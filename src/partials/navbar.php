@@ -60,7 +60,7 @@
                         </a>
                     </li>
                 <li class="nav-item me-3 me-lg-0 mb-10">
-                  <a class="nav-link" href="logout.php" rel="nofollow">
+                  <a class="nav-link" href="src/auth/logout.php" rel="nofollow">
                     Odhlásiť sa
                   </a>
                 </li>

@@ -6,6 +6,6 @@ unset($_SESSION['Login_Prihlasovacie_meno']);
 unset($_SESSION['Login_Meno_Priezvisko']);
 unset($_SESSION['Login_RolaID']);
 //session_destroy();
-header('Location: index.php');
+header('Location: ../../index.php');
 ?>
 
