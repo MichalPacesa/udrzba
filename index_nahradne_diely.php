@@ -16,7 +16,7 @@ session_start();
     }
     include_once "src/partials/navbar.php"; // navigacia
 
-    if(!strpos($_SERVER['HTTP_REFERER'], 'nahradny_diel.php')){
+    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/nahradny_diel.php')){
         $_SESSION["hlaska"] = "";
     }
 
@@ -389,16 +389,16 @@ session_start();
                 },
 
                 editRow: function(Nahradny_dielID){
-                    location.replace("nahradny_diel.php?Nahradny_dielID="+Nahradny_dielID);
+                    location.replace("src/form/nahradny_diel.php?Nahradny_dielID="+Nahradny_dielID);
 
                 },
 
                 viewRow: function(Nahradny_dielID){
-                    location.replace("nahradny_diel.php?Nahradny_dielID="+Nahradny_dielID+"&zobrazit=1");
+                    location.replace("src/form/nahradny_diel.php?Nahradny_dielID="+Nahradny_dielID+"&zobrazit=1");
                 },
 
                 newRow: function(){
-                    location.replace("nahradny_diel.php");
+                    location.replace("src/form/nahradny_diel.php");
                 },
 
                 nextPage: function() {
