@@ -3,7 +3,7 @@
 <html>
 <head>
 
-    <?php include "../../head.php";
+    <?php include_once '../partials/head.php'; 
 
     include "../../config.php";
     include_once "../../lib.php";
@@ -94,7 +94,7 @@ else
 
 <h1><?php echo $nadpis; ?></h1>
 <p>
-<form id ="myapp_form" action="zmena_poruchy.php" method="POST" onsubmit="return app.strojChecked">
+<form id ="myapp_form" action="../zmena/zmena_poruchy.php" method="POST" onsubmit="return app.strojChecked">
 
     <?php if($Por_datum_pridelenia): ?>
         <div class="container d-flex align-items-center">

@@ -10,8 +10,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
 <!-- mdbootstrap -->
-<link rel="stylesheet" href="../../mdbootstrap/css/mdb.min.css" />
+<link rel="stylesheet" href="../../mdbootstrap/css/mdb.min.css">
 <link rel="stylesheet" href="../../mdbootstrap/css/all.css">
+<link rel="stylesheet" href="mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="mdbootstrap/css/all.css">
 
  <!-- Google Fonts Roboto -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +24,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js" ></script>
 
 <!-- CSS štýl -->
-
 <style>
     <?php include __DIR__ . '/../../css/style.css'; ?>
     <?php include __DIR__ . '/../../css/style_rd.css'; ?>

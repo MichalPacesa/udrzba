@@ -3,12 +3,12 @@ session_start();
 ?>
     <!DOCTYPE html>
     <html>
-    <head><?php include "head.php" ?></head>
+    <head><?php include_once "src/partials/head.php"; ?></head>
     <body>
     <?php
     include "config.php";  
     include "lib.php";	
-    include 'login.php';
+    include 'src/auth/login.php';
 
     // Ak nie je pouzivatel prihlaseny tak exit
     if (!isset($_SESSION['Login_Prihlasovacie_meno'])){  
@@ -16,7 +16,7 @@ session_start();
     }
     include_once "src/partials/navbar.php"; // navigacia
 
-    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/porucha.php') AND !strpos($_SERVER['HTTP_REFERER'], 'zmena_hesla.php') AND !strpos($_SERVER['HTTP_REFERER'], 'src/form/oprava.php')){
+    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/porucha.php') AND !strpos($_SERVER['HTTP_REFERER'], 'src/zmena/zmena_hesla.php') AND !strpos($_SERVER['HTTP_REFERER'], 'src/form/oprava.php')){
         $_SESSION["hlaska"] = "";
     }
 
