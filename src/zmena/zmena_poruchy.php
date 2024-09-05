@@ -77,7 +77,6 @@ if($_POST["akcia"]=="insert" && $_POST["Por_nazov"]!="" && $_POST["back"] != "Sp
     $sql = "INSERT INTO `porucha` (`Por_nazov`, `Por_popis`, `Por_stav`, `Por_datum_vzniku`, `Por_datum_pridelenia`, `PoruchaID`, `StrojID`, `PouzivatelID`)
             VALUES ('$Por_nazov','$Por_popis','$Por_stav','$Upraveny_datum_vzniku','$Upraveny_datum_pridelenia',NULL,".
             (is_null($StrojID) ? "NULL" : $StrojID).",".(is_null($PouzivatelID) ? "NULL" : $PouzivatelID).")";
-//    echo "SQL: ".$sql;exit;
 
         $vysledok = mysqli_query($dblink, $sql); /* vykonam sql prikaz select a vysledok načítame do premennej vysledok*/
 

@@ -69,7 +69,6 @@ if($_POST["akcia"]=="insert" && $_POST["Stroj_nazov"]!="" && $_POST["back"] != "
 	// INSERT STROJA
 	$sql = "INSERT INTO `stroj` (`Stroj_nazov`, `Stroj_popis`, `Stroj_umiestnenie`,`Stroj_vyrobca`,`Stroj_datum_vyroby`,`Stroj_vyrobne_cislo`,`Stroj_evidencne_cislo`, `DodavatelID`,`Stroj_datum_prevzatia`,`Stroj_zarucna_doba`, `StrojID`) VALUES
 			('$Stroj_nazov','$Stroj_popis','$Stroj_umiestnenie','$Stroj_vyrobca','$Upraveny_datum_vyroby','$Stroj_vyrobne_cislo','$Stroj_evidencne_cislo',".(is_null($DodavatelID) ? "NULL" : $DodavatelID).",'$Upraveny_datum_prevzatia',".(is_null($Stroj_zarucna_doba) ? "NULL" : $Stroj_zarucna_doba).", NULL)";
-//echo "SQL: ".$sql;exit;
 	$vysledok = mysqli_query($dblink, $sql); // vykonam sql prikaz select a vysledok naƒç√≠tame do premennej $vysledok
 	if (!$vysledok)
 	{ 
@@ -185,13 +184,13 @@ if ($_POST["akcia"]=="update" && $_POST["StrojID"]!="" && $_POST["back"] != "Sp√
 		if (!$vysledok_prilohy)
 		{$hlaska .="Doslo k chybe pri vyhladani pr√≠loh !";}
 		elseif($num_rows!=0){
-			for ($s=0; $s < $num_rows; $s++){// poradie priloh
+			for ($s=0; $s < $num_rows; $s++){ // poradie priloh
 				$row=mysqli_fetch_assoc($vysledok_prilohy);
 				if($_POST['Zmazat_prilohu_'.$s] and ($_POST['Zmazat_prilohu_'.$s]=="zmazat")){
 					$cesta='prilohy'.$row['Nazov_suboru'];
 					$PrilohaID=$row['PrilohaID'];
-					if (file_exists($cesta)){     //existuje taky subor na disku
-						@unlink($cesta);     // vymazeme ho
+					if (file_exists($cesta)){     // Ak existuje taky subor na disku
+						@unlink($cesta);     	  // Tak 
 					}
 					$sql = "Delete FROM priloha where PrilohaID=$PrilohaID"; // vymazeme aj v db
 					$vysledok=mysqli_query($dblink,$sql);
@@ -211,7 +210,7 @@ if ($_POST["akcia"]=="update" && $_POST["StrojID"]!="" && $_POST["back"] != "Sp√
 	/* END PRILOHY */
 
 	
-	$_SESSION["hlaska"]=$hlaska; //echo $_SESSION["hlaska"];
+	$_SESSION["hlaska"]=$hlaska;
 	
 	endif;
 //-----------------------------------------------------------------------	
