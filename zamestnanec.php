@@ -387,10 +387,9 @@ mysqli_close($dblink); // odpojit sa z DB
             checkUsername: function() {
                 this.usernameChecked = true;
                 if(this.username!==this.oldname){ // zmenilli pouzivatelske  meno
-                    axios.get(`search_login.php?q=${this.username}`)
+                    axios.get(`src/search/search_login.php?q=${this.username}`)
                         .then(function (response)  {
-                            console.log(response.data);
-
+                            
                             if (response.data) {
                                 app.message = 'Toto prihlasovacie meno sa už v systéme nachádza, skúste ho zmeniť.';
                                 app.usernameChecked = false;
