@@ -1,8 +1,8 @@
 <?php
 // zmazanie zaznamu z nahradnych dielov
 session_start();
-include_once "config.php";
-include_once "lib.php";
+include_once "../../config.php";
+include_once "../../lib.php";
 
 $chyba='';
 

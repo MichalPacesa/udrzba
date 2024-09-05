@@ -1,9 +1,8 @@
 <?php
-
-// zmazanie zaznamu zamestnanca z tabulky zamestnanec
+// zmazanie zaznamu poruchy z tabulky porucha
 session_start();
-include_once "config.php";
-include_once "lib.php";
+include_once "../../config.php";
+include_once "../../lib.php";
 
 if(ZistiPrava("editPorucha",$dblink) == 0){
 
@@ -22,10 +21,8 @@ if(isset($_GET['Por_nazov']) and $_GET['Por_nazov'] ){
 }
 else exit;
 
-
-/*pouzivateID je totozne s zamestnanecID*/
 $sql = "DELETE FROM porucha WHERE PoruchaID=$PoruchaID";
-$vysledok = mysqli_query($dblink, $sql); // vymazanie zamestnanca
+$vysledok = mysqli_query($dblink, $sql); // vymazanie poruchy
 if (!$vysledok){
     $chyba="Chyba pri vymazávaní poruchy! <br>";
 }
