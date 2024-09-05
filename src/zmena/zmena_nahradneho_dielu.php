@@ -81,7 +81,7 @@ if($_POST["akcia"]=="insert" && $_POST["Diel_evidencne_cislo"]!="" && $_POST["ba
     $vysledok = mysqli_query($dblink, $sql);
     $num_row = mysqli_num_rows($vysledok);
     if($num_row > 0){  /// Ak nasiel aspon 1 zaznam{
-        header('Location:stroj.php?vysledok=chyba');
+        header('Location:src/form/stroj.php?vysledok=chyba');
         exit;
     }
 
@@ -125,7 +125,7 @@ if ($_POST["akcia"]=="update" && $_POST["Nahradny_dielID"]!="" && $_POST["back"]
         $vysledok = mysqli_query($dblink, $sql);
         $num_row = mysqli_num_rows($vysledok);
         if ($num_row > 0) {  /// Ak nasiel aspon 1 zaznam{
-            header('Location:stroj.php?vysledok=chyba');
+            header('Location:src/form/stroj.php?vysledok=chyba');
             exit;
         }
     }

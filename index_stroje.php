@@ -17,7 +17,7 @@ session_start();
     }
     include_once "src/partials/navbar.php"; // navigacia
 
-    if(!strpos($_SERVER['HTTP_REFERER'], 'stroj.php')){
+    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/stroj.php')){
         $_SESSION["hlaska"] = "";
     }    
 
@@ -356,16 +356,16 @@ session_start();
                 },
 
                 editRow: function(StrojID){
-                    location.replace("stroj.php?StrojID="+StrojID);
+                    location.replace("src/form/stroj.php?StrojID="+StrojID);
 
                 },
 
                 viewRow: function(StrojID){
-                    location.replace("stroj.php?StrojID="+StrojID+"&zobrazit=1");
+                    location.replace("src/form/stroj.php?StrojID="+StrojID+"&zobrazit=1");
                 },
 
                 newRow: function(){
-                    location.replace("stroj.php");
+                    location.replace("src/form/stroj.php");
                 },
 
                 nextPage: function() {
