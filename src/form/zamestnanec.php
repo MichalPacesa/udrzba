@@ -389,7 +389,7 @@ mysqli_close($dblink); // odpojit sa z DB
             checkUsername: function() {
                 this.usernameChecked = true;
                 if(this.username!==this.oldname){ // zmenilli pouzivatelske  meno
-                    axios.get(`src/search/search_login.php?q=${this.username}`)
+                    axios.get(`../search/search_login.php?q=${this.username}`)
                         .then(function (response)  {
                             
                             if (response.data) {

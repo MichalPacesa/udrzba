@@ -236,7 +236,7 @@ mysqli_close($dblink); // odpojit sa z DB
             checkNazov: function(Nazov_selected) {
                 this.nazovChecked = true;
                 if(this.searchInput!==this.oldnazov  || Nazov_selected!==this.oldnazov){
-                    axios.get(`src/search/search_nazov_cinnosti.php?q=${this.searchInput}`)
+                    axios.get(`../searchsearch_nazov_cinnosti.php?q=${this.searchInput}`)
                         .then(function (response)  {
                             console.log(response.data);
 
