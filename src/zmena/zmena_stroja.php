@@ -84,19 +84,19 @@ if($_POST["akcia"]=="insert" && $_POST["Stroj_nazov"]!="" && $_POST["back"] != "
 	$j=1;
 	$pocet_priloh = 0;
 	if ($_FILES["userfile1"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../../../upload.php';}
 	$j=2;
 	if ($_FILES["userfile2"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=3;
 	if ($_FILES["userfile3"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=4;
 	if ($_FILES["userfile4"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=5;
 	if ($_FILES["userfile5"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 
 	if($pocet_priloh == 1)
 		$hlaska.="<span class='oznam'> ".$pocet_priloh."&nbsppríloha bola úspešne odoslaná.</span>";
@@ -153,19 +153,19 @@ if ($_POST["akcia"]=="update" && $_POST["StrojID"]!="" && $_POST["back"] != "Sp�
 	$j=1;
 	$pocet_priloh = 0;
 	if ($_FILES["userfile1"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=2;
 	if ($_FILES["userfile2"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=3;
 	if ($_FILES["userfile3"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=4;
 	if ($_FILES["userfile4"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 	$j=5;
 	if ($_FILES["userfile5"]['name'])  //uzivatel vybral novy subor
-	{include 'upload.php';}
+	{include '../../upload.php';}
 
 	if($pocet_priloh == 1)
 		$hlaska.="<span class='oznam'> ".$pocet_priloh."&nbsppríloha bola úspešne odoslaná.</span>";
