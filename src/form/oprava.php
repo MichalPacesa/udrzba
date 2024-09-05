@@ -212,7 +212,7 @@ else
 
 <h1 id="nadpisoprava"><?php echo $nadpis; ?></h1>
 <p>
-<form id ="myapp_form_oprava" action="zmena_opravy.php" method="POST" onsubmit="">
+<form id ="myapp_form_oprava" action="../zmena/zmena_opravy.php" method="POST" onsubmit="">
 
     <?php if($Por_datum_pridelenia): ?>
         <div class="container d-flex align-items-center">
@@ -731,7 +731,7 @@ else
 
 </form>
 
-<form id="back" action="zmena_opravy.php" method="POST"></form>
+<form id="back" action="../zmena/zmena_opravy.php" method="POST"></form>
 
 <?php
 mysqli_close($dblink); // odpojit sa z DB

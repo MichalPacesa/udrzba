@@ -55,7 +55,7 @@
                   </a>
                 </li>
                     <li class="nav-item me-3 me-lg-0 mb-10">
-                        <a class="nav-link" href="zmena_hesla.php" rel="nofollow">
+                        <a class="nav-link" href="src/zmena/zmena_hesla.php" rel="nofollow">
                             Zmena hesla
                         </a>
                     </li>

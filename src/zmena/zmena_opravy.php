@@ -1,7 +1,7 @@
 <?php
 session_start();//phpinfo();
-include "config.php";  // konfiguracia
-include "lib.php";	//	funkcie
+include "../../config.php";  // konfiguracia
+include "../../lib.php";	//	funkcie
 
 if (!$dblink) { // kontrola ci je pripojenie na databazu dobre ak nie tak napise chybu
     echo "Chyba pripojenia na DB!</br>";
@@ -191,5 +191,5 @@ if($_POST['Zmazat_opravy_nahradny_diel']){
 }
 
 $_SESSION["hlaska"]=$hlaska;
-header('Location: index.php');
+header('Location: ../../index.php');
 ?>

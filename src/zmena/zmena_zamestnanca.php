@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "config.php";  // konfiguracia
-include "lib.php";	//	funkcie
+include "../../config.php";  // konfiguracia
+include "../../lib.php";	//	funkcie
 
 if (!$dblink) { // kontrola ci je pripojenie na databazu dobre ak nie tak napise chybu
 	echo "Chyba pripojenia na DB!</br>";
@@ -153,5 +153,5 @@ if ($_POST["akcia"]=="update" && $_POST["ZamestnanecID"]!="" && $_POST["back"] !
 endif;
 //-----------------------------------------------------------------------
 
-header('Location: index_zamestnanci.php');
+header('Location: ../../index_zamestnanci.php');
 ?>

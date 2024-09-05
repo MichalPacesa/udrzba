@@ -76,7 +76,7 @@ else {
 <h1><?php echo $nadpis; ?></h1>
 
 <p>
-<form id="myapp_form" action="zmena_cinnosti_opravy.php" method="POST" onsubmit="return app.nazovChecked">
+<form id="myapp_form" action="../zmena/zmena_cinnosti_opravy.php" method="POST" onsubmit="return app.nazovChecked">
 
     <p class="oznam text-grey text-start">Položky označené <span class="red bold">*</span> sú povinné</p>
 
@@ -155,7 +155,7 @@ else {
     </table>
 </form>
 
-<form id="back" action="zmena_cinnosti_opravy.php" method="POST"></form>
+<form id="back" action="../zmena/zmena_cinnosti_opravy.php" method="POST"></form>
 </p>
 <?php
 mysqli_close($dblink); // odpojit sa z DB

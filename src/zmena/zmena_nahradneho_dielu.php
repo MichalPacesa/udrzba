@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "config.php";  // konfiguracia
-include "lib.php";	//	funkcie
+include "../../config.php";  // konfiguracia
+include "../../lib.php";	//	funkcie
 
 if (!$dblink) { // kontrola ci je pripojenie na databazu dobre ak nie tak napise chybu
     echo "Chyba pripojenia na DB!</br>";
@@ -63,28 +63,6 @@ if($Diel_datum_prevzatia == "")
     $Upraveny_datum_prevzatia = "0000-00-00";
 else
     $Upraveny_datum_prevzatia = date("y-m-d", strtotime($Diel_datum_prevzatia));
-
-//echo "Diel_evidencne_cislo: " . $Diel_evidencne_cislo . "<br>";
-//echo "Diel_evidencne_cislo stare: " . $Diel_evidencne_cislo_old . "<br>";
-//echo "Diel_nazov: " . $Diel_nazov . "<br>";
-//echo "Diel_popis: " . $Diel_popis . "<br>";
-//echo "Diel_jednotka: " . $Diel_jednotka . "<br>";
-//echo "Diel_mnozstvo: " . $Diel_mnozstvo . "<br>";
-//echo "Diel_umiestnenie: " . $Diel_umiestnenie . "<br>";
-//echo "Diel_datum_prevzatia: " . $Diel_datum_prevzatia . "<br>";
-//echo "Diel_datum_prevzatia upraveny: " . $Upraveny_datum_prevzatia . "<br>";
-//echo "Diel_zarucna_doba: " . $Diel_zarucna_doba . "<br>";
-//
-//echo "KategoriaID: " . $KategoriaID . "<br>";
-//echo "Kat_nazov: " . $Kat_nazov . "<br>";
-//
-//echo "StrojID: " . $StrojID . "<br>";
-//echo "StrojID_old: " . $StrojID_old . "<br>";
-//echo "Stroj_nazov_old: " . $Stroj_nazov_old . "<br>";
-//echo "Stroj_nazov: " . $Stroj_nazov . "<br>";
-//exit;
-
-
 
 // ---------------- Idem insertovat zaznam do tabuluky ------------------
 if($_POST["akcia"]=="insert" && $_POST["Diel_evidencne_cislo"]!="" && $_POST["back"] != "Späť"):  // ak je akcia insert z hidden parametru formulara a vyplnené meno nesmie byt prazdne
@@ -183,5 +161,5 @@ if ($_POST["akcia"]=="update" && $_POST["Nahradny_dielID"]!="" && $_POST["back"]
 endif;
 //-----------------------------------------------------------------------
 
-header('Location: index_nahradne_diely.php');
+header('Location: ../../index_nahradne_diely.php');
 ?>

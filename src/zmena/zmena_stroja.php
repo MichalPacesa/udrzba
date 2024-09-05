@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "config.php";  // konfiguracia
-include "lib.php";	//	funkcie    
+include "../../config.php";  // konfiguracia
+include "../../lib.php";	//	funkcie    
 
 if (!$dblink) { // kontrola ci je pripojenie na databazu dobre ak nie tak napise chybu
 	echo "Chyba pripojenia na DB!</br>";
@@ -216,5 +216,5 @@ if ($_POST["akcia"]=="update" && $_POST["StrojID"]!="" && $_POST["back"] != "SpÃ
 	endif;
 //-----------------------------------------------------------------------	
 
-header('Location: index_stroje.php');
+header('Location: ../../index_stroje.php');
 ?>

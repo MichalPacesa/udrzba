@@ -141,7 +141,7 @@ else
 <h1><?php echo $nadpis; ?></h1>
 
 <p>
-<form id ="myapp_form" action="zmena_stroja.php" method="POST" enctype="multipart/form-data" onsubmit="return app.evidencneCisloChecked" >
+<form id ="myapp_form" action="../zmena/zmena_stroja.php" method="POST" enctype="multipart/form-data" onsubmit="return app.evidencneCisloChecked" >
 
     <p class="oznam text-grey text-start">Položky označené <span class="red bold">*</span> sú povinné</p>
      <?php
@@ -291,7 +291,7 @@ else
     </table>
 </form>
 
-<form id="back" action="zmena_stroja.php" method="POST"></form>
+<form id="back" action="../zmena/zmena_stroja.php" method="POST"></form>
 </p>
 <?php
 mysqli_close($dblink); // odpojit sa z DB
