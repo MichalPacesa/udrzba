@@ -243,7 +243,7 @@ session_start();
             methods: {
                 allRecords: function(){
 
-                    axios.get('read_nahradne_diely.php')
+                    axios.get('src/read/read_nahradne_diely.php')
                         .then(function (response) {
                             app.nahradny_diel = response.data;
                         })
@@ -259,7 +259,7 @@ session_start();
 
                 recordBySearch: function(){
                     if(app.search !=="" && this.kategoria === ""){
-                        axios.get('read_nahradne_diely.php', {
+                        axios.get('src/read/read_nahradne_diely.php', {
                             params: {
                                 search: app.search
                             }
@@ -272,7 +272,7 @@ session_start();
                             });
                     }
                     if(app.search !=="" && this.kategoria !== ""){
-                        axios.get('read_nahradne_diely.php', {
+                        axios.get('src/read/read_nahradne_diely.php', {
                             params: {
                                 search: app.search,
                                 kategoria: this.kategoria
@@ -298,7 +298,7 @@ session_start();
 
                     } else {
                         if(app.search !==""){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                            axios.get('read_nahradne_diely.php', {
+                            axios.get('src/read/read_nahradne_diely.php', {
                                 params: {
                                     kategoria: this.kategoria,
                                     search: app.search
@@ -312,7 +312,7 @@ session_start();
                                 });
                         }
                         else{
-                            axios.get('read_nahradne_diely.php', {
+                            axios.get('src/read/read_nahradne_diely.php', {
                                 params: {
                                     kategoria: this.kategoria,
                                 }
@@ -328,7 +328,7 @@ session_start();
                     }
                 },
                 listCategory: function(){
-                    axios.get('read_nahradne_diely.php', {
+                    axios.get('src/read/read_nahradne_diely.php', {
                         params: {
                             list: "Kat_nazov"
                         }

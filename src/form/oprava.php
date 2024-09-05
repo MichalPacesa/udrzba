@@ -794,7 +794,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_cinnosti.php', {
+                axios.get('../read/read_cinnosti.php', {
                     params: {
                         list: "Cin_nazov"
                     }
@@ -892,7 +892,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_cinnosti.php', {
+                axios.get('../read/read_cinnosti.php', {
                     params: {
                         list: "Cin_nazov"
                     }
@@ -988,7 +988,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_cinnosti.php', {
+                axios.get('../read/read_cinnosti.php', {
                     params: {
                         list: "Cin_nazov"
                     }
@@ -1088,7 +1088,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_nahradne_diely.php', {
+                axios.get('../read/read_nahradne_diely.php', {
                     params: {
                         list_nahradne_diely: "Diel_nazov"
                     }
@@ -1184,7 +1184,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_nahradne_diely.php', {
+                axios.get('../read/read_nahradne_diely.php', {
                     params: {
                         list_nahradne_diely: "Diel_nazov"
                     }
@@ -1280,7 +1280,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_nahradne_diely.php', {
+                axios.get('../read/read_nahradne_diely.php', {
                     params: {
                         list_nahradne_diely: "Diel_nazov"
                     }

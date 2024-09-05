@@ -218,7 +218,7 @@ session_start();
 
             methods: {
                 allRecords: function(){
-                    axios.get('read_stroje.php')
+                    axios.get('src/read/read_stroje.php')
                         .then(function (response) {
                             app.stroj = response.data;
                            
@@ -234,7 +234,7 @@ session_start();
                     }},
                 recordBySearch: function(){
                     if(app.search !=="" && this.stroj === ""){
-                        axios.get('read_stroje.php', {
+                        axios.get('src/read/read_stroje.php', {
                             params: {
                                 search: app.search
                             }
@@ -247,7 +247,7 @@ session_start();
                             });
                     }
                     if(app.search !=="" && this.stroj !== ""){
-                        axios.get('read_stroje.php', {
+                        axios.get('src/read/read_stroje.php', {
                             params: {
                                 search: app.search,
                                 pozicia: this.pozicia
@@ -272,7 +272,7 @@ session_start();
 
                     } else {
                         if(app.search !==""){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                            axios.get('read_stroje.php', {
+                            axios.get('src/read/read_stroje.php', {
                                 params: {
                                     pozicia: this.pozicia,
                                     search: app.search
@@ -286,7 +286,7 @@ session_start();
                                 });
                         }
                         else{
-                            axios.get('read_stroje.php', {
+                            axios.get('src/read/read_stroje.php', {
                                 params: {
                                     pozicia: this.pozicia,
                                 }
@@ -302,7 +302,7 @@ session_start();
                     }
                 },
                 listPosition: function(){
-                    axios.get('read_stroje.php', {
+                    axios.get('src/read/read_stroje.php', {
                         params: {
                             list: "Stroj_umiestnenie"
                         }

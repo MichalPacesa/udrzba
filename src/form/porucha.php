@@ -279,7 +279,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_stroje.php', {
+                axios.get('../read/read_stroje.php', {
                     params: {
                         list: "Stroj_nazov"
                     }

@@ -208,7 +208,7 @@ session_start();
             methods: {
                 allRecords: function(){
 
-                    axios.get('read_cinnosti.php')
+                    axios.get('src/read/read_cinnosti.php')
                         .then(function (response) {
                             app.cinnost_opravy = response.data;
                         })
@@ -223,7 +223,7 @@ session_start();
                     }},
                 recordBySearch: function(){
                     if(app.search !==""){
-                        axios.get('read_cinnosti.php', {
+                        axios.get('src/read/read_cinnosti.php', {
                             params: {
                                 search: app.search
                             }

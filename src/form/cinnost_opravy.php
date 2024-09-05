@@ -220,7 +220,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listPosition: function(){
-                axios.get('read_cinnosti.php', {
+                axios.get('../read/read_cinnosti.php', {
                     params: {
                         list: "Cin_nazov"
                     }

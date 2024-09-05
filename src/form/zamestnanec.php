@@ -373,7 +373,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listPosition: function(){
-                axios.get('read_zamestnanci.php', {
+                axios.get('../read/read_zamestnanci.php', {
                     params: {
                         list: "Zam_pozicia"
                     }

@@ -442,7 +442,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listCategory: function(){
-                axios.get('read_nahradne_diely.php', {
+                axios.get('../read/read_nahradne_diely.php', {
                     params: {
                         list_kategoria: "Kat_nazov"
                     }
@@ -566,7 +566,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listMachine: function(){
-                axios.get('read_stroje.php', {
+                axios.get('../read/read_stroje.php', {
                     params: {
                         list: "Stroj_nazov"
                     }
@@ -717,7 +717,7 @@ mysqli_close($dblink); // odpojit sa z DB
             },
 
             listPartPosition: function(){
-                axios.get('read_nahradne_diely.php', {
+                axios.get('../read/read_nahradne_diely.php', {
                     params: {
                         list_umiestnenie: "Diel_umiestnenie"
                     }

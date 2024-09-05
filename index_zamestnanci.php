@@ -221,7 +221,7 @@ session_start();
             methods: {
                 allRecords: function(){
 
-                    axios.get('read_zamestnanci.php')
+                    axios.get('src/read/read_zamestnanci.php')
                         .then(function (response) {
                             app.zamestnanec = response.data;
                         })
@@ -236,7 +236,7 @@ session_start();
                     }},
                 recordBySearch: function(){
                     if(app.search !==""){
-                        axios.get('read_zamestnanci.php', {
+                        axios.get('src/read/read_zamestnanci.php', {
                             params: {
                                 search: app.search
                             }
@@ -260,7 +260,7 @@ session_start();
 
                     } else {
                         if(app.search !==""){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                            axios.get('read_zamestnanci.php', {
+                            axios.get('src/read/read_zamestnanci.php', {
                                 params: {
                                     pozicia: this.pozicia,
                                     search: app.search
@@ -274,7 +274,7 @@ session_start();
                                 });
                         }
                         else{
-                            axios.get('read_zamestnanci.php', {
+                            axios.get('src/read/read_zamestnanci.php', {
                                 params: {
                                     pozicia: this.pozicia,
                                 }
@@ -290,7 +290,7 @@ session_start();
                     }
                 },
                 listPosition: function(){
-                    axios.get('read_zamestnanci.php', {
+                    axios.get('src/read/read_zamestnanci.php', {
                         params: {
                             list: "Zam_pozicia"
                         }

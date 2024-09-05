@@ -251,7 +251,7 @@ session_start();
             methods: {
                 allRecords: function(){
 
-                    axios.get('read_poruchy.php')
+                    axios.get('src/read/read_poruchy.php')
                         .then(function (response) {
                             app.porucha = response.data;
 
@@ -278,7 +278,7 @@ session_start();
 
                 recordBySearch: function(){
                     if(app.search !=="" && app.stav === "0" && app.stroj === "0"){
-                        axios.get('read_poruchy.php', {
+                        axios.get('src/read/read_poruchy.php', {
                             params: {
                                 search: app.search
                             }
@@ -291,7 +291,7 @@ session_start();
                             });
                     }
                     if(app.search !=="" && app.stav !== "0"){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                        axios.get('read_poruchy.php', {
+                        axios.get('src/read/read_poruchy.php', {
                             params: {
                                 Por_stav: app.stav,
                                 search: app.search
@@ -305,7 +305,7 @@ session_start();
                             });
                     }
                     if(app.search !=="" && app.stroj !== "0"){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                        axios.get('read_poruchy.php', {
+                        axios.get('src/read/read_poruchy.php', {
                             params: {
                                 StrojID: app.stroj,
                                 search: app.search
@@ -331,7 +331,7 @@ session_start();
                     } else {
                         app.stav = "0";
                         if(app.search !==""){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                                axios.get('read_poruchy.php', {
+                                axios.get('src/read/read_poruchy.php', {
                                     params: {
                                         StrojID: stroj_selected,
                                         search: app.search
@@ -346,7 +346,7 @@ session_start();
                         }
                         else{
 
-                            axios.get('read_poruchy.php', {
+                            axios.get('src/read/read_poruchy.php', {
                                 params: {
                                     StrojID: stroj_selected
                                 }
@@ -374,7 +374,7 @@ session_start();
                     } else {
                         app.stroj = "0";
                         if(app.search !==""){ // Ak je vyplnena search tak nech aj vyhlada aj vyfiltruje
-                            axios.get('read_poruchy.php', {
+                            axios.get('src/read/read_poruchy.php', {
                                 params: {
                                     Por_stav: stav_selected,
                                     search: app.search
@@ -388,7 +388,7 @@ session_start();
                                 });
                         }
                         else{
-                                axios.get('read_poruchy.php', {
+                                axios.get('src/read/read_poruchy.php', {
                                 params: {
                                     Por_stav: stav_selected,
                                 }
@@ -405,7 +405,7 @@ session_start();
                 },
 
                 listMachine: function(){
-                    axios.get('read_stroje.php', {
+                    axios.get('src/read/read_stroje.php', {
                         params: {
                             list: "Stroj_nazov",
                             porucha: "1",
@@ -421,7 +421,7 @@ session_start();
                 },
 
                 listState: function(){
-                    axios.get('read_poruchy.php', {
+                    axios.get('src/read/read_poruchy.php', {
                         params: {
                             list: "Por_stav"
                         }
