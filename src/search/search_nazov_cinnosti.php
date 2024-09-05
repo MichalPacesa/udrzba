@@ -1,7 +1,7 @@
 <?php
 // program na kontrolu existencie názvu činnosti údržby. Vysledok posle ako json a hlaska sa zobrazi sa v message
-include "config.php";
-include "lib.php";
+include "../../config.php";
+include "../../lib.php";
 $hladaj=$_GET["q"];
 $sql = "SELECT Cin_nazov FROM cinnost_opravy WHERE Cin_nazov='$hladaj'";
 //echo $sql;exit;

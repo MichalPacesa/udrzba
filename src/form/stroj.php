@@ -339,7 +339,7 @@ mysqli_close($dblink); // odpojit sa z DB
             checkEvidencneCislo: function() {
                 this.evidencneCisloChecked = true;
                 if(this.evidencneCislo!==this.oldEvidencneCislo){ // zmenilli pouzivatelske  meno
-                    axios.get(`src/search/search_evidencne_cislo.php?q=${this.evidencneCislo}`)
+                    axios.get(`../search_evidencne_cislo.php?q=${this.evidencneCislo}`)
                         .then(function (response)  {
                             console.log(response.data);
 

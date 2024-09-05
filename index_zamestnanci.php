@@ -216,9 +216,6 @@ session_start();
                 totalPages: function() {
                     return Math.ceil(this.zamestnanec.length / this.itemsPerPage);
                 },
-                /*paginatedEmployees: function() {
-                    return this.getPageData();
-                }*/
             },
 
             methods: {

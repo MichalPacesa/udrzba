@@ -1,7 +1,7 @@
 <?php
 // program na kontrolu existencie loginu. Vysledok posle ako json a hlaska sa zobrazi sa v message
-include "config.php";
-include "lib.php";
+include "../../config.php";
+include "../../lib.php";
 $hladaj=$_GET["q"];
 $sql = "SELECT Pouz_meno FROM pouzivatel WHERE Pouz_meno='$hladaj'";
 $vysledok = mysqli_query($dblink, $sql);

@@ -1,7 +1,7 @@
 <?php
 // program na kontrolu existencie kategorie. Vysledok posle ako json a hlaska sa zobrazi sa v message
-include "config.php";
-include "lib.php";
+include "../../config.php";
+include "../../lib.php";
 $hladaj=$_GET["q"];
 $sql = "SELECT KategoriaID FROM kategoria WHERE Kat_nazov='$hladaj'";
 $vysledok = mysqli_query($dblink, $sql);

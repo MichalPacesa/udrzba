@@ -1,7 +1,7 @@
 <?php
 // program na kontrolu existencie evidencneho cisla. Vysledok posle ako json a hlaska sa zobrazi sa v message
-include "config.php";
-include "lib.php";
+include "../../config.php";
+include "../../lib.php";
 $hladaj=$_GET["q"];
 $sql = "SELECT Stroj_evidencne_cislo FROM stroj WHERE Stroj_evidencne_cislo='$hladaj'";
 $vysledok = mysqli_query($dblink, $sql);
