@@ -15,7 +15,7 @@ if (!$dblink) {
     die("Nepodarilo sa nadviazať spojenie s databázou: " . mysqli_connect_error());
 }
 
-$stav = 0;  // stav = 1 znamena, ze chceme vidiet chyby 
+$stav = 0;  // stav = 1 zobrazuje chyby, stav = 0 nezobrazuje chyby
 @ini_set('display_errors', $stav);
 @ini_set('display_startup_errors;',$stav);
 if($stav){
