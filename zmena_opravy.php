@@ -47,7 +47,7 @@ for ($i = 0; $i <3 ; $i++) {
 if($_POST["akcia"]=="insert"  && $_POST["PoruchaID"]!="" && ($_POST["Cinnost_opravyID"]!="" OR $_POST["Cin_nazov"]!="")  && $_POST["back"] != "Späť" ):  // ak je akcia insert z hidden parametru formulara
     if(($Cinnost_opravyID  or $Cin_nazov) and (!$Opr_odpracovane_hodiny)){
         // to je v pripade ze pridali len cinnost opravy a nic ine
-        header('Location:oprava.php?&PoruchaID='.$PoruchaID.'&vysledok=chyba');
+        header('Location:src/form/oprava.php?&PoruchaID='.$PoruchaID.'&vysledok=chyba');
         exit;
 
     }
@@ -147,7 +147,7 @@ for ($i = 0; $i <3 ; $i++) {
        // phpinfo();
         if(($Nahradny_dielID  || $Opr_nazov_dielu) && (!$Opr_mnozstvo || !$Opr_jednotka)){
             // to je v pripade ze pridali len nazov dielu  a nic ine
-            header('Location:oprava.php?&PoruchaID='.$PoruchaID.'&vysledok=chyba2');
+            header('Location:src/form/oprava.php?&PoruchaID='.$PoruchaID.'&vysledok=chyba2');
             exit;
         }
         if($Nahradny_dielID){  // nepotrebujeme zapisat nazov dielu ked je v ciselniku

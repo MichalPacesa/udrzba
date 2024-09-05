@@ -16,7 +16,7 @@ session_start();
     }
     include_once "src/partials/navbar.php"; // navigacia
 
-    if(!strpos($_SERVER['HTTP_REFERER'], 'porucha.php') AND !strpos($_SERVER['HTTP_REFERER'], 'zmena_hesla.php') AND !strpos($_SERVER['HTTP_REFERER'], 'oprava.php')){
+    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/porucha.php') AND !strpos($_SERVER['HTTP_REFERER'], 'zmena_hesla.php') AND !strpos($_SERVER['HTTP_REFERER'], 'src/form/oprava.php')){
         $_SESSION["hlaska"] = "";
     }
 
@@ -477,19 +477,19 @@ session_start();
                 },
 
                 editRow: function(PoruchaID){
-                    location.replace("porucha.php?PoruchaID="+PoruchaID);
+                    location.replace("src/form/porucha.php?PoruchaID="+PoruchaID);
                 },
 
                 viewRow: function(PoruchaID){
-                    location.replace("porucha.php?PoruchaID="+PoruchaID+"&zobrazit=1");
+                    location.replace("src/form/porucha.php?PoruchaID="+PoruchaID+"&zobrazit=1");
                 },
 
                 newRow: function(){
-                    location.replace("porucha.php");
+                    location.replace("src/form/porucha.php");
                 },
 
                 repair: function(PoruchaID){
-                    location.replace("oprava.php?PoruchaID="+PoruchaID);
+                    location.replace("src/form/oprava.php?PoruchaID="+PoruchaID);
                 },
 
                 nextPage: function() {

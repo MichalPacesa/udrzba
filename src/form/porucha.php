@@ -5,8 +5,8 @@
 
     <?php include_once "head.php";
 
-    include "config.php";
-    include_once "lib.php";
+    include "../../config.php";
+    include_once "../../lib.php";
     include 'login.php';
 
     if (!isset($_SESSION['Login_Prihlasovacie_meno']))  // nie je prihlaseny
