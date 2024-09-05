@@ -352,14 +352,14 @@ mysqli_close($dblink); // odpojit sa z DB
         methods: {
             checkEvidencneCislo: function() {
                 this.evidencneCisloChecked = true;
-                if(this.evidencneCislo!==this.oldEvidencneCislo || this.evidencneCislo!==""){ // zmenilli pouzivatelske  meno
+                if(this.evidencneCislo!==this.oldEvidencneCislo && this.evidencneCislo!==""){ // zmenilli evidencne cislo
 
                     axios.get(`../search/search_diel_evidencne_cislo.php?q=${this.evidencneCislo}`)
                         .then(function (response)  {
-                            // console.log(response.data);
+                            
                             if (response.data) {
                                 app.evidencneCisloChecked = false;
-                                app.message = 'Toto evidenčné číslo sa už v systéme nachádza, skúste ho zmeniť.';
+                                app.message = 'Toto evidenčné číslo sa už v systéme nachádza, skúste ho zmeniťaa.';
 
                             } else {
 
@@ -465,7 +465,6 @@ mysqli_close($dblink); // odpojit sa z DB
                 if(this.searchInput!==this.oldKategoria){ // zmenilli kategoriu
                     axios.get(`../search/search_kategoria.php?q=${this.searchInput}`)
                         .then(function (response)  {
-                            // console.log(response.data);
                             if (response.data) {
                                 app1.KategoriaID = response.data;
                             } else {
@@ -651,9 +650,6 @@ mysqli_close($dblink); // odpojit sa z DB
             partPositions: "",
             message: '',
             mouseIndex: null,
-            evidencneCisloChecked: true,
-            oldEvidencneCislo: '<?php echo $Diel_evidencne_cislo; ?>',
-            evidencneCislo: '<?php echo $Diel_evidencne_cislo; ?>',
         },
         mounted: function(){
             this.listPartPosition();
@@ -671,27 +667,6 @@ mysqli_close($dblink); // odpojit sa z DB
             }
         },
         methods: {
-            checkEvidencneCislo: function() {
-                this.evidencneCisloChecked = true;
-                if(this.evidencneCislo!==this.oldEvidencneCislo){ // zmenilli pouzivatelske  meno
-                    axios.get(`../search/search_evidencne_cislo.php?q=${this.evidencneCislo}`)
-                        .then(function (response)  {
-                            console.log(response.data);
-
-                            if (response.data) {
-                                app3.message = 'Toto evidenčné číslo sa už v systéme nachádza, skúste ho zmeniť.';
-                                app3.evidencneCisloChecked = false;
-                            } else {
-                                app3.message = '';
-                                app3.evidencneCisloChecked = true;
-                            }
-                        })
-                        .catch(error => {
-                            console.error(error);
-                            app3.message = 'Vyskytla sa chyba kontroly evidenčného čísla. Skúste ho zadať neskôr.';
-                        });
-                }
-            },
 
             moveSelection(step) {
                 this.selectedIndex += step;
