@@ -84,7 +84,7 @@ if($_POST["akcia"]=="insert" && $_POST["Stroj_nazov"]!="" && $_POST["back"] != "
 	$j=1;
 	$pocet_priloh = 0;
 	if ($_FILES["userfile1"]['name'])  //uzivatel vybral novy subor
-	{include '../../../../upload.php';}
+	{include '../../upload.php';}
 	$j=2;
 	if ($_FILES["userfile2"]['name'])  //uzivatel vybral novy subor
 	{include '../../upload.php';}
