@@ -20,7 +20,7 @@ session_start();
         exit;
     }
 
-    if(!strpos($_SERVER['HTTP_REFERER'], 'cinnost_opravy.php')){
+    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/cinnost_opravy.php')){
         $_SESSION["hlaska"] = "";
     }
 
@@ -283,16 +283,16 @@ session_start();
                 },
 
                 editRow: function(Cinnost_opravyID){
-                    location.replace("cinnost_opravy.php?Cinnost_opravyID="+Cinnost_opravyID);
+                    location.replace("src/form/cinnost_opravy.php?Cinnost_opravyID="+Cinnost_opravyID);
 
                 },
 
                 viewRow: function(Cinnost_opravyID){
-                    location.replace("cinnost_opravy.php?Cinnost_opravyID="+Cinnost_opravyID+"&zobrazit=1");
+                    location.replace("src/form/cinnost_opravy.php?Cinnost_opravyID="+Cinnost_opravyID+"&zobrazit=1");
                 },
 
                 newRow: function(){
-                    location.replace("cinnost_opravy.php");
+                    location.replace("src/form/cinnost_opravy.php");
                 },
 
                 nextPage: function() {

@@ -34,7 +34,7 @@ if($_POST["akcia"]=="insert" && $_POST["Cin_nazov"]!="" && $_POST["back"] != "Sp
 	$vysledok = mysqli_query($dblink, $sql);
 	$num_row = mysqli_num_rows($vysledok);
 	if($num_row > 0){  /// Ak nasiel aspon 1 zaznam{
-		header('Location: cinnost_opravy.php?vysledok=chyba');
+		header('Location: ../form/cinnost_opravy.php?vysledok=chyba');
 		exit;
 	}
 
@@ -66,7 +66,7 @@ if ($_POST["akcia"]=="update" && $_POST["Cinnost_opravyID"]!="" && $_POST["back"
 		$vysledok = mysqli_query($dblink, $sql);
 		$num_row = mysqli_num_rows($vysledok);
 		if($num_row > 0){  /// Ak nasiel aspon 1 zaznam
-				header('Location: cinnost_opravy.php?vysledok=chyba');
+				header('Location: ../form/cinnost_opravy.php?vysledok=chyba');
 				exit;
 		}
 	}
