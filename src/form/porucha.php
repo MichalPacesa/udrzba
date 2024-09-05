@@ -300,7 +300,7 @@ mysqli_close($dblink); // odpojit sa z DB
                 }
 
                 if(this.searchInput!==this.oldstroj && this.searchInput!==""){ // zmenilli pouzivatelske  meno
-                    axios.get(`../searchsearch_stroj.php?q=${this.searchInput}`)
+                    axios.get(`../search/search_stroj.php?q=${this.searchInput}`)
                         .then(function (response)  {
                             // console.log(response.data);
                             if (response.data) {

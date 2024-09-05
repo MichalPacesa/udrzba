@@ -354,7 +354,7 @@ mysqli_close($dblink); // odpojit sa z DB
                 this.evidencneCisloChecked = true;
                 if(this.evidencneCislo!==this.oldEvidencneCislo || this.evidencneCislo!==""){ // zmenilli pouzivatelske  meno
 
-                    axios.get(`../searchsearch_diel_evidencne_cislo.php?q=${this.evidencneCislo}`)
+                    axios.get(`../search/search_diel_evidencne_cislo.php?q=${this.evidencneCislo}`)
                         .then(function (response)  {
                             // console.log(response.data);
                             if (response.data) {
@@ -463,7 +463,7 @@ mysqli_close($dblink); // odpojit sa z DB
                 }
 
                 if(this.searchInput!==this.oldKategoria){ // zmenilli pouzivatelske  meno
-                    axios.get(`../searchsearch_kategoria.php?q=${this.searchInput}`)
+                    axios.get(`../search/search_kategoria.php?q=${this.searchInput}`)
                         .then(function (response)  {
                             // console.log(response.data);
                             if (response.data) {
@@ -587,7 +587,7 @@ mysqli_close($dblink); // odpojit sa z DB
                 }
 
                 if(this.searchInput!==this.oldstroj && this.searchInput!==""){ // zmenilli pouzivatelske  meno
-                    axios.get(`../searchsearch_stroj.php?q=${this.searchInput}`)
+                    axios.get(`../search/search_stroj.php?q=${this.searchInput}`)
                         .then(function (response)  {
                             // console.log(response.data);
                             if (response.data) {
@@ -674,7 +674,7 @@ mysqli_close($dblink); // odpojit sa z DB
             checkEvidencneCislo: function() {
                 this.evidencneCisloChecked = true;
                 if(this.evidencneCislo!==this.oldEvidencneCislo){ // zmenilli pouzivatelske  meno
-                    axios.get(`../searchsearch_evidencne_cislo.php?q=${this.evidencneCislo}`)
+                    axios.get(`../search/search_evidencne_cislo.php?q=${this.evidencneCislo}`)
                         .then(function (response)  {
                             console.log(response.data);
 
