@@ -3,11 +3,11 @@
 <html>
 <head>
 
-    <?php include_once "head.php";
+    <?php include "../../head.php";
 
     include "../../config.php";
     include_once "../../lib.php";
-    include 'login.php';
+    include '../auth/login.php';
 
     if (!isset($_SESSION['Login_Prihlasovacie_meno']))  // nie je prihlaseny
     {
@@ -21,8 +21,6 @@
     }
 
     ?>
-
-
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
 <!-- mdbootstrap -->
-<link rel="stylesheet" href="mdbootstrap/css/mdb.min.css" />
-<link rel="stylesheet" href="mdbootstrap/css/all.css">
+<link rel="stylesheet" href="../../mdbootstrap/css/mdb.min.css" />
+<link rel="stylesheet" href="../../mdbootstrap/css/all.css">
 
  <!-- Google Fonts Roboto -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +24,9 @@
 <!-- CSS štýl -->
 
 <style>
-    <?php include "css/style.css"; ?>
-    <?php include "css/style_rd.css"; ?>
-    <?php include "css/style_roboto.css"; ?>
+    <?php include __DIR__ . '/../../css/style.css'; ?>
+    <?php include __DIR__ . '/../../css/style_rd.css'; ?>
+    <?php include __DIR__ . '/../../css/style_roboto.css'; ?>
 </style>
 	
 <script>
