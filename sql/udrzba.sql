@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Pi 19.Apr 2024, 13:53
+-- Čas generovania: Pi 06.Sep 2024, 20:19
 -- Verzia serveru: 10.4.32-MariaDB
 -- Verzia PHP: 8.2.12
 
@@ -20,12 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Databáza: `udrzba`
 --
-
-/* Drop Database Create Database */
-
-DROP DATABASE IF EXISTS udrzba;
-CREATE DATABASE udrzba;
-USE udrzba;
 
 -- --------------------------------------------------------
 
@@ -187,12 +181,12 @@ CREATE TABLE `nahradny_diel` (
 --
 
 INSERT INTO `nahradny_diel` (`Diel_evidencne_cislo`, `Diel_nazov`, `Diel_popis`, `Diel_jednotka`, `Diel_mnozstvo`, `Diel_umiestnenie`, `Diel_datum_prevzatia`, `Diel_zarucna_doba`, `Nahradny_dielID`, `KategoriaID`, `StrojID`) VALUES
-('0', 'Sada na výmenu valcov pre drvič sladu', NULL, 'ks', 1, 'H1', NULL, 24, 1, 1, 2),
-('0', 'Guličkové ložisko - šrotovník', NULL, 'ks', 1, 'H1', NULL, 6, 2, 10, 2),
-('0', 'Hriadeľ na kalové čerpadlo', NULL, 'ks', 1, 'H1', NULL, 24, 3, 7, 5),
-('0', 'Valec na šrotovník', NULL, 'ks', 1, 'H1', NULL, 24, 4, 15, 2),
-('2020001', 'Odstredivé čerpadlo', NULL, 'ks', 1, 'S1', NULL, 24, 5, 7, 1),
-('2020005', ' Magnetické čerpadlo', NULL, 'ks', 1, 'C1', NULL, 24, 6, 7, 3);
+('642 650 216', 'Sada na výmenu valcov pre drvič sladu', '', 'ks', 2, 'H1', '2023-01-28', 24, 1, 1, 2),
+('642 644 503', 'Guličkové ložisko - šrotovník', '', 'ks', 3, 'H1', '2024-05-28', 6, 2, 10, 2),
+('642 647 509', 'Hriadeľ na kalové čerpadlo', '', 'ks', 1, 'H1', '2024-08-12', 24, 3, 7, 5),
+('642 625 138', 'Valec na šrotovník', '', 'ks', 5, 'H1', '2024-01-31', 24, 4, 15, 2),
+('642 620 682', 'Odstredivé čerpadlo', '', 'ks', 1, 'S1', '2024-06-17', 24, 5, 7, 1),
+('642 617 775', 'Magnetické čerpadlo', '', 'ks', 1, 'C1', '2024-01-10', 24, 6, 7, 3);
 
 -- --------------------------------------------------------
 
@@ -250,8 +244,8 @@ CREATE TABLE `porucha` (
 --
 
 INSERT INTO `porucha` (`Por_nazov`, `Por_popis`, `Por_stav`, `Por_datum_vzniku`, `Por_datum_pridelenia`, `PoruchaID`, `StrojID`, `PouzivatelID`) VALUES
-('Nevyčkuje fľaše !', 'Vyraďovačka vyraďuje zle zavíčkované fľaše !', 2, '2024-04-04 11:00:00', '2024-04-14 21:50:18', 1, 16, 4),
-('Zle umýva fľaše !', 'Vyraďovačka vyraďuje znečistené fľaše !', 1, '2024-04-01 10:00:00', '0000-00-00 00:00:00', 2, 14, NULL),
+('Nevyčkuje fľaše', 'Vyraďovačka vyraďuje zle zavíčkované fľaše !', 2, '2024-04-04 11:00:00', '0000-00-00 00:00:00', 1, 16, 4),
+('Zle umýva fľaše', 'Vyraďovačka vyraďuje znečistené fľaše !', 1, '2024-04-01 10:00:00', '0000-00-00 00:00:00', 2, 14, NULL),
 ('Nešrotuje obilie', 'Divné zvuky na motore, šrotovník nejde', 2, '2024-04-14 21:57:00', '2024-04-14 22:00:37', 3, 2, 5),
 ('Pokazené čerpadlo', 'Nejde čerpadlo na slad medzi kaďami', 4, '2024-04-14 22:00:00', '2024-04-14 22:05:06', 7, 4, 5),
 ('Kvapká tesnenie Spilka', 'Na potrubí za spilkou na spoji kvapká', 1, '2024-04-14 22:05:00', '2024-04-14 22:06:30', 8, 7, 7),
