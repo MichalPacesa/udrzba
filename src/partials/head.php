@@ -9,11 +9,22 @@
 <!-- bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
+<?php
+// Zistíme aktuálnu cestu
+$path = '';
+if (strpos($_SERVER['REQUEST_URI'], '/src/') !== false) {
+    // Ak sa nachádzame v podadresári 'src' alebo jeho podadresároch
+    $path = '../../';
+} else {
+    // Pre koreňový adresár
+    $path = '';
+}
+?>
+
 <!-- mdbootstrap -->
-<link rel="stylesheet" href="../../mdbootstrap/css/mdb.min.css">
-<link rel="stylesheet" href="../../mdbootstrap/css/all.css">
-<link rel="stylesheet" href="mdbootstrap/css/mdb.min.css">
-<link rel="stylesheet" href="mdbootstrap/css/all.css">
+<link rel="stylesheet" href="<?php echo $path; ?>mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="<?php echo $path; ?>mdbootstrap/css/all.css">
+
 
  <!-- Google Fonts Roboto -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
