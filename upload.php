@@ -1,7 +1,5 @@
 <?php
 
-//@ini_set('display_errors',1);
-//@ini_set('display_startup_errors;',1);
 
 $typsuboru=$_FILES['userfile'.$j]['type']; echo $typsuboru;
 
@@ -27,7 +25,7 @@ $nazovsuboru=zrus_diakritiku($nazovsuboru);//odstranime diakritiku medzery a vel
 
 $r=rand(1000, 9999);
 $nazovsuboru=$r.'-'.$nazovsuboru;  // doplnime nahodne cislo do nazvu ... 
-$subor="prilohy/".$nazovsuboru;
+$subor="../../prilohy/".$nazovsuboru;
    
 
 if (!is_uploaded_file($_FILES['userfile'.$j]['tmp_name'])){
