@@ -81,7 +81,7 @@ if($_POST["akcia"]=="insert" && $_POST["Diel_evidencne_cislo"]!="" && $_POST["ba
     $vysledok = mysqli_query($dblink, $sql);
     $num_row = mysqli_num_rows($vysledok);
     if($num_row > 0){  /// Ak nasiel aspon 1 zaznam{
-        header('Location:src/form/stroj.php?vysledok=chyba');
+        header('Location:../form/nahradny_diel.php?vysledok=chyba');
         exit;
     }
 
@@ -90,8 +90,6 @@ if($_POST["akcia"]=="insert" && $_POST["Diel_evidencne_cislo"]!="" && $_POST["ba
                              `Diel_zarucna_doba`,`Nahradny_dielID`,`KategoriaID`,`StrojID`)
             VALUES ('$Diel_evidencne_cislo','$Diel_nazov','$Diel_popis','$Diel_jednotka','$Diel_mnozstvo','$Diel_umiestnenie','$Upraveny_datum_prevzatia',
                     '$Diel_zarucna_doba',NULL,$KategoriaID,".(is_null($StrojID) ? "NULL" : $StrojID).")";
-
-    //echo "SQL: ".$sql;exit;
 
         $vysledok = mysqli_query($dblink, $sql); /* vykonam sql prikaz select a vysledok načítame do premennej vysledok*/
 
@@ -125,7 +123,7 @@ if ($_POST["akcia"]=="update" && $_POST["Nahradny_dielID"]!="" && $_POST["back"]
         $vysledok = mysqli_query($dblink, $sql);
         $num_row = mysqli_num_rows($vysledok);
         if ($num_row > 0) {  /// Ak nasiel aspon 1 zaznam{
-            header('Location:src/form/stroj.php?vysledok=chyba');
+            header('Location:../form/nahradny_diel.php?vysledok=chyba');
             exit;
         }
     }
@@ -142,9 +140,6 @@ if ($_POST["akcia"]=="update" && $_POST["Nahradny_dielID"]!="" && $_POST["back"]
             `KategoriaID`='$KategoriaID', 
             `StrojID`=" . (is_null($StrojID) ? "NULL" : "'$StrojID'") . "
         WHERE Nahradny_dielID = $Nahradny_dielID";
-
-//    echo $sql; exit;
-
 
     $vysledok = mysqli_query($dblink, $sql); // vykonam sql prikaz update a vysledky nacitame do premennej $vysledok
     if (!$vysledok)
