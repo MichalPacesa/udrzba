@@ -160,7 +160,7 @@ else
                 <div id="evidencne">
                     <span class="cervene" v-if="message">{{ message }}</span>
                     <input required type="text" class="form-control" v-model="evidencneCislo" @change="checkEvidencneCislo()" name="Diel_evidencne_cislo" value="<?php echo $Diel_evidencne_cislo;?>" <?php echo disabled($akcia);?>/>
-                    <button style="width: 8rem !important;" type="button" class="form-control" @click="generatePartNumber" <?php echo disabled($akcia);?>>Vygenerovať</button>
+                    <button style="width: 8rem !important;" type="button" class="form-control" @blur="checkEvidencneCislo()" @click="generatePartNumber()" <?php echo disabled($akcia);?>>Vygenerovať</button>
                 </div>
             </td></tr>
         <tr><td>Názov: <span class="hviezdicka">*</span></td><td> <input required type="text" class="form-control" name="Diel_nazov" value="<?php echo $Diel_nazov;?>" <?php echo disabled($akcia);?>></br></td></tr>
@@ -359,7 +359,7 @@ mysqli_close($dblink); // odpojit sa z DB
                             
                             if (response.data) {
                                 app.evidencneCisloChecked = false;
-                                app.message = 'Toto evidenčné číslo sa už v systéme nachádza, skúste ho zmeniťaa.';
+                                app.message = 'Toto evidenčné číslo sa už v systéme nachádza, skúste ho zmeniť.';
 
                             } else {
 
