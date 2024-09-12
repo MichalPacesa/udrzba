@@ -242,7 +242,7 @@ else
                         $nazov_suboru_skrateny = getShortFileName($nazov_suboru, 15, 5);
                         ?>
                         <div class="col-md-4" id="Subor_<?php echo $s;?>" style="display:block; float:left;">
-                            <?php echo '<a href="prilohy/'.$nazov_suboru.'" title="Otvoriť" target="_blank">'.'<div style="float:left">'.$nazov_suboru_skrateny.'</div></a>';
+                            <?php echo '<a href="../../prilohy/'.$nazov_suboru.'" title="Otvoriť" target="_blank">'.'<div style="float:left">'.$nazov_suboru_skrateny.'</div></a>';
 
                             if($akcia!="preview")
                                 echo '<button type="button" id="prilohaikona" class="btn" title="Vymazať prílohu" style="padding-bottom: 1rem;" onclick="zmazat_prilohu('.$s.',\''.$nazov_suboru.'\')"><i class="fa-regular fa-trash-can"></i></button>';
