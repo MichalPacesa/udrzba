@@ -123,7 +123,7 @@ if ($_POST["akcia"]=="update" && $_POST["Nahradny_dielID"]!="" && $_POST["back"]
         $vysledok = mysqli_query($dblink, $sql);
         $num_row = mysqli_num_rows($vysledok);
         if ($num_row > 0) {  /// Ak nasiel aspon 1 zaznam{
-            header('Location:../form/nahradny_diel.php?vysledok=chyba');
+            header('Location:../form/nahradny_diel.php?Nahradny_dielID='.$Nahradny_dielID.'&vysledok=chyba');
             exit;
         }
     }
