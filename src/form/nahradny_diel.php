@@ -58,9 +58,6 @@
 /*novy zamestnanec a zmena */
 
 
-// pripojenie na DB server a zapamatame si pripojenie do premennej $dblink
-//$dblink = mysqli_connect($mysql_server, $mysql_user, $mysql_password, $mysql_db);
-
 if (!$dblink) { // kontrola ci je pripojenie na db dobre ak nie tak napise chybu
     echo "Chyba pripojenia na DB!</br>";
     die(); // ukonci vykonanie php
@@ -148,7 +145,7 @@ else
 
     <?php
     if($_GET["vysledok"] == "chyba")
-        $hlaska = "Zadané prihlasovacie meno už existuje.";
+        $hlaska = "Zadané evidenčné číslo už existuje.";
     ?>
 
     <p class="oznam red text-start"><?php echo $hlaska;?></p>
