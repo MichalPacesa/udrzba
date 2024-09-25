@@ -6,16 +6,18 @@ session_start();
     <head><?php include_once "src/partials/head.php"; ?></head>
     <body>
     <?php
-    include "config.php";  
+    include "config.php";  // Načítanie konfiguračného súboru
     include "lib.php";	
     include 'src/auth/login.php';
 
-    // Ak nie je pouzivatel prihlaseny tak exit
+    // Ak nie je používateľ prihlásený, ukonči skript
     if (!isset($_SESSION['Login_Prihlasovacie_meno'])){  
         exit;
     }
-    include_once "src/partials/navbar.php"; // navigacia
+    // Načítanie navigačného panelu
+    include_once "src/partials/navbar.php";
 
+    // Vynuluj hlášku ak referer nie je z niektorej z formulárových stránok
     if (isset($_SERVER['HTTP_REFERER']) &&
         (!strpos($_SERVER['HTTP_REFERER'], 'src/form/porucha.php') &&
             !strpos($_SERVER['HTTP_REFERER'], 'src/zmena/zmena_hesla.php') &&
@@ -23,6 +25,7 @@ session_start();
         $_SESSION["hlaska"] = "";
     }
 
+    // Kontrola práv na zobrazenie porúch
     if(ZistiPrava("Zobraz_poruchy",$dblink) == 0){
         echo "<span class='oznam'>Nemáte práva na zobrazenie porúch.</span>";
         exit;
@@ -33,14 +36,17 @@ session_start();
     <div id='myapp'>
         <div class="graybox container-fluid col-md-12 col-12">
             <div class="row border0 d-flex align-items-end justify-content-center">
+                <!-- Titulok stránky -->
                 <div class="col-md-3 col-12 justify-content-center">
                     <h2>Poruchy</h2>
                 </div>
 
+                <!-- Tlačidlo na pridanie novej poruchy -->
                 <div class="col-md-3 col-12 filtre">
                     <input type='button' class="btn padding" @click='newRow' value='Nová porucha'>
                 </div>
 
+                <!-- Filter pre výber stroja -->
                 <div class="marginbottom col-md-3 col-12 flex-column d-flex align-items-center justify-content-center roboto-light filtre">
                     Stroj:
                     <br>
@@ -52,6 +58,7 @@ session_start();
                     </select>
                 </div>
 
+                <!-- Vyhľadávacie pole -->
                 <div class="col-md-3 col-12 d-flex align-items-end justify-content-center">
                     <div class="input-group flex-nowrap filtre hladaj">
                         <input type="text" class="form-control" placeholder="Hladať" v-model="search" id="search"  v-on:keyup.esc="clearSearch" v-on:keyup.enter="recordBySearch">
