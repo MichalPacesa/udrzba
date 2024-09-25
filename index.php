@@ -16,7 +16,10 @@ session_start();
     }
     include_once "src/partials/navbar.php"; // navigacia
 
-    if(!strpos($_SERVER['HTTP_REFERER'], 'src/form/porucha.php') AND !strpos($_SERVER['HTTP_REFERER'], 'src/zmena/zmena_hesla.php') AND !strpos($_SERVER['HTTP_REFERER'], 'src/form/oprava.php')){
+    if (isset($_SERVER['HTTP_REFERER']) &&
+        (!strpos($_SERVER['HTTP_REFERER'], 'src/form/porucha.php') &&
+            !strpos($_SERVER['HTTP_REFERER'], 'src/zmena/zmena_hesla.php') &&
+            !strpos($_SERVER['HTTP_REFERER'], 'src/form/oprava.php'))){
         $_SESSION["hlaska"] = "";
     }
 
