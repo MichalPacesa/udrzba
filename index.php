@@ -41,7 +41,7 @@ session_start();
                 <div class="marginbottom col-md-3 col-12 flex-column d-flex align-items-center justify-content-center roboto-light filtre">
                     Stroj:
                     <br>
-                    <select v-model="stroj" id="stroj" class="form-select" class="select_height" @change="recordByMachine(stroj)">
+                    <select v-model="stroj" id="stroj" class="form-select select_height" @change="recordByMachine(stroj)">
                         <option value="0" selected>Všetky</option>
                         <template v-for="machine in machines">
                             <option v-bind:value="machine.StrojID" >{{machine.Stroj_nazov}}</option>
