@@ -26,7 +26,7 @@ session_start();
     }
 
     // Kontrola práv na zobrazenie porúch
-    if(ZistiPrava("Zobraz_poruchy",$dblink) == 0){
+    if(ZistiPrava("Zobraz_poruchy", $dblink) == 0){
         echo "<span class='oznam'>Nemáte práva na zobrazenie porúch.</span>";
         exit;
     }
