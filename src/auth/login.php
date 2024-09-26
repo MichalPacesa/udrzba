@@ -1,7 +1,5 @@
 <?php
-include_once('config.php');
-include_once('head.php');
-include_once('lib.php');
+
 generateToken(); //vygeneruje sa token
 
 if(isset($_POST['Login_Prihlasovacie_meno']) AND isset($_POST['Login_Prihlasovacie_heslo']))
