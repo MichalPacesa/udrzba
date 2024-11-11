@@ -9,4 +9,4 @@ Servisný technici si po prihlásení môžu prezerať aktuálne poruchy a plán
 
 Návrh systému bol vytvorený v UML. Systém bol implementovaný s použitím technológií PHP, MySQL, JavaScript, Vue.js, HTML, CSS a Bootstrap pričom každá časť aplikácie je optimalizovaná pre jednoduché a bezpečné používanie. Počas práce som nadobudol nové skúsenosti vo vývoji webových aplikácií a návrhu softvéru.
 
-![alt text](https://michal.pacesa.sk/wp-content/uploads/2024/08/diplomova-praca.png)
+![alt text](https://michal.pacesa.sk/wp-content/uploads/2024/08/diplomova-praca-informacny-system-pre-oddelenie-udrzby.webp)
